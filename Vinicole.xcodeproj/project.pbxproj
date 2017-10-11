@@ -14,7 +14,6 @@
 		182BE95A1E3261990049E57B /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182BE9591E3261990049E57B /* HelpViewController.m */; };
 		182BE95E1E3276210049E57B /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182BE95D1E3276210049E57B /* AboutUsViewController.m */; };
 		184882B61EFDB14100C5F40A /* DeviceSetTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184882B51EFDB14100C5F40A /* DeviceSetTimeViewController.m */; };
-		184882BC1EFEF37A00C5F40A /* DeviceWorkingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184882BB1EFEF37A00C5F40A /* DeviceWorkingViewController.m */; };
 		1848CB7C1F02A1DB005BC95A /* UAProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1848CB7B1F02A1DB005BC95A /* UAProgressView.m */; };
 		1856ABE41DF52818005EFF8A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1856ABE61DF52818005EFF8A /* Localizable.strings */; };
 		1856ABF51DF67CD0005EFF8A /* AddDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856ABF41DF67CD0005EFF8A /* AddDeviceViewController.m */; };
@@ -29,8 +28,6 @@
 		1856AC331DF6D0C6005EFF8A /* SendPacketModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856AC281DF6D0C6005EFF8A /* SendPacketModel.m */; };
 		1856AC341DF6D0C6005EFF8A /* UINavigationController+PushViewControllerWithAnimated.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856AC2A1DF6D0C6005EFF8A /* UINavigationController+PushViewControllerWithAnimated.m */; };
 		1856AC351DF6D0C6005EFF8A /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856AC2C1DF6D0C6005EFF8A /* UserModel.m */; };
-		185D8B681EFC3B92005BC3D9 /* herpusi_start_bg@2x.gif in Resources */ = {isa = PBXBuildFile; fileRef = 185D8B661EFC3B92005BC3D9 /* herpusi_start_bg@2x.gif */; };
-		185D8B691EFC3B92005BC3D9 /* herpusi_start_bg@3x.gif in Resources */ = {isa = PBXBuildFile; fileRef = 185D8B671EFC3B92005BC3D9 /* herpusi_start_bg@3x.gif */; };
 		18839E141DDAFA4C00B87B4D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18839E131DDAFA4C00B87B4D /* main.m */; };
 		18839E171DDAFA4C00B87B4D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18839E161DDAFA4C00B87B4D /* AppDelegate.m */; };
 		18839E1F1DDAFA4C00B87B4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18839E1E1DDAFA4C00B87B4D /* Assets.xcassets */; };
@@ -77,8 +74,6 @@
 		182BE95D1E3276210049E57B /* AboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsViewController.m; sourceTree = "<group>"; };
 		184882B41EFDB14100C5F40A /* DeviceSetTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceSetTimeViewController.h; sourceTree = "<group>"; };
 		184882B51EFDB14100C5F40A /* DeviceSetTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceSetTimeViewController.m; sourceTree = "<group>"; };
-		184882BA1EFEF37A00C5F40A /* DeviceWorkingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceWorkingViewController.h; sourceTree = "<group>"; };
-		184882BB1EFEF37A00C5F40A /* DeviceWorkingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceWorkingViewController.m; sourceTree = "<group>"; };
 		1848CB7A1F02A1DB005BC95A /* UAProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UAProgressView.h; sourceTree = "<group>"; };
 		1848CB7B1F02A1DB005BC95A /* UAProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UAProgressView.m; sourceTree = "<group>"; };
 		1856ABE71DF52826005EFF8A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -105,8 +100,6 @@
 		1856AC2A1DF6D0C6005EFF8A /* UINavigationController+PushViewControllerWithAnimated.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+PushViewControllerWithAnimated.m"; sourceTree = "<group>"; };
 		1856AC2B1DF6D0C6005EFF8A /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
 		1856AC2C1DF6D0C6005EFF8A /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
-		185D8B661EFC3B92005BC3D9 /* herpusi_start_bg@2x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "herpusi_start_bg@2x.gif"; sourceTree = "<group>"; };
-		185D8B671EFC3B92005BC3D9 /* herpusi_start_bg@3x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "herpusi_start_bg@3x.gif"; sourceTree = "<group>"; };
 		18839E0F1DDAFA4C00B87B4D /* Vinicole.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vinicole.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18839E131DDAFA4C00B87B4D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		18839E151DDAFA4C00B87B4D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -224,8 +217,6 @@
 				1856ABFC1DF68927005EFF8A /* DeviceControlViewController.m */,
 				184882B41EFDB14100C5F40A /* DeviceSetTimeViewController.h */,
 				184882B51EFDB14100C5F40A /* DeviceSetTimeViewController.m */,
-				184882BA1EFEF37A00C5F40A /* DeviceWorkingViewController.h */,
-				184882BB1EFEF37A00C5F40A /* DeviceWorkingViewController.m */,
 			);
 			name = DeviceControl;
 			sourceTree = "<group>";
@@ -395,8 +386,6 @@
 		18839EB81DDAFD6400B87B4D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				185D8B661EFC3B92005BC3D9 /* herpusi_start_bg@2x.gif */,
-				185D8B671EFC3B92005BC3D9 /* herpusi_start_bg@3x.gif */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -548,12 +537,10 @@
 			files = (
 				18839EC01DDAFD9E00B87B4D /* Index.storyboard in Resources */,
 				188E44B41DE1B6D000368F7B /* Login.storyboard in Resources */,
-				185D8B681EFC3B92005BC3D9 /* herpusi_start_bg@2x.gif in Resources */,
 				1856ABFF1DF68980005EFF8A /* DeviceControl.storyboard in Resources */,
 				1856ABE41DF52818005EFF8A /* Localizable.strings in Resources */,
 				1856ABF71DF67D3F005EFF8A /* AddDevice.storyboard in Resources */,
 				18839E221DDAFA4C00B87B4D /* LaunchScreen.storyboard in Resources */,
-				185D8B691EFC3B92005BC3D9 /* herpusi_start_bg@3x.gif in Resources */,
 				18839E1F1DDAFA4C00B87B4D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -572,7 +559,6 @@
 				18839E781DDAFCCD00B87B4D /* GCDAsyncUdpSocket.m in Sources */,
 				18839EBD1DDAFD7400B87B4D /* BaseNavigationController.m in Sources */,
 				18839E171DDAFA4C00B87B4D /* AppDelegate.m in Sources */,
-				184882BC1EFEF37A00C5F40A /* DeviceWorkingViewController.m in Sources */,
 				18839E951DDAFCD600B87B4D /* CATransition+Extension2.m in Sources */,
 				1856ABFD1DF68927005EFF8A /* DeviceControlViewController.m in Sources */,
 				1856AC341DF6D0C6005EFF8A /* UINavigationController+PushViewControllerWithAnimated.m in Sources */,
@@ -727,7 +713,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Warmer/PrefixHeader.pch;
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/xlinksdklib_v3/xlinksdklib/SDKlib";
-				INFOPLIST_FILE = Warmer/Info.plist;
+				INFOPLIST_FILE = Vinicole/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/Warmer/SDK/HFSmartLink";
@@ -750,7 +736,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Warmer/PrefixHeader.pch;
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/xlinksdklib_v3/xlinksdklib/SDKlib";
-				INFOPLIST_FILE = Warmer/Info.plist;
+				INFOPLIST_FILE = Vinicole/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/Warmer/SDK/HFSmartLink";

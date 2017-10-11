@@ -7,7 +7,6 @@
 //
 
 #import "DeviceSetTimeViewController.h"
-#import "DeviceWorkingViewController.h"
 
 #import "DeviceModel.h"
 #import "SendPacketModel.h"
@@ -88,11 +87,7 @@
     [self.deviceModel.dataPoint[11] replaceBytesInRange:NSMakeRange(0,1) withBytes:&minute length:1];
     
     [SendPacketModel controlDevice:self.deviceModel.device withSendDataArray:self.deviceModel.dataPoint];
-    
-    DeviceWorkingViewController *vc = [self loadViewControllerWithStoryboardName:@"DeviceControl" withViewControllerName:@"DeviceWorkingViewController"];
-    vc.doingWhat = self.doWhat;
-    vc.deviceModel = self.deviceModel;
-    [self.navigationController pushViewController:vc animated:YES];
+
 }
 #pragma mark  - pickview delegate
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView

@@ -24,14 +24,14 @@
 }
 
 - (IBAction)phoneCall:(id)sender {
-    NSString *phoneStr = [NSString stringWithFormat:@"tel:%@",@"400-880-3348"];
+    NSString *phoneStr = [NSString stringWithFormat:@"tel:%@",@"+86-760-8877"];
     UIWebView *callWebview = [[UIWebView alloc] init];
     [callWebview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:phoneStr]]];
     [self.view addSubview:callWebview];
 }
 
 - (IBAction)goSafari:(id)sender {
-    NSURL *url = [[NSURL alloc]initWithString:@"http://www.zshelps.com"];
+    NSURL *url = [[NSURL alloc]initWithString:@"www.vinicolecellar.com"];
     [[UIApplication sharedApplication] openURL:url];
 }
 

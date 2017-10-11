@@ -11,6 +11,9 @@
 #import "LaunchScreenViewController.h"
 #import "NSBundle+Language.h"
 
+#import "BaseNavigationController.h"
+#import "LoginViewController.h"
+
 @interface AppDelegate ()<XlinkExportObjectDelegate>
 
 @end
@@ -31,12 +34,30 @@
     [XLinkExportObject sharedObject].delegate = self;
     [[XLinkExportObject sharedObject] start];
     
-    LaunchScreenViewController *vc = [[LaunchScreenViewController alloc]init];
-    self.window.rootViewController = vc;
+//    LaunchScreenViewController *vc = [[LaunchScreenViewController alloc]init];
+//    self.window.rootViewController = vc;
+    [self isAutoLogin];
     [self.window makeKeyAndVisible];
     
     return YES;
 
+}
+
+-(void)isAutoLogin{
+    BOOL isAutoLogin = [[NSUserDefaults standardUserDefaults] boolForKey:@"isAutoLogin"];
+    UIStoryboard *storyboard;
+    if (isAutoLogin) {
+        
+        LoginViewController *loginVc = [[LoginViewController alloc]init];
+        [loginVc AutoLogin];
+        
+        storyboard = [UIStoryboard storyboardWithName:@"Index" bundle:nil];
+    }else{
+        storyboard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
+        
+    }
+    BaseNavigationController *vc =[storyboard instantiateViewControllerWithIdentifier:@"BaseNavigationController"];
+    self.window.rootViewController = vc;
 }
 
 -(void)checkIsHaveExpDevice{

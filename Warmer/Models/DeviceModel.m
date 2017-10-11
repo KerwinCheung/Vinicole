@@ -30,7 +30,7 @@
 
     deviceModel.isExpDevice = @(1);
     deviceModel.device = [[DeviceEntity alloc]init];
-    deviceModel.name = @"商用豆浆机-演示机";
+    deviceModel.name = @"Vinicole-演示机";
     [deviceModel setDefaultDataPoint];
     return deviceModel;
     
