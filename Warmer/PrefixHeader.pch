@@ -1,0 +1,53 @@
+//
+//  PrefixHeader.pch
+//  CiLiang
+//
+//  Created by apple on 16/10/8.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#define FanPID @"160fa6b2e33603e9160fa6b2e336e801"
+#define FanKey @"c2adf734eaac108dcd5992cd6040d884"
+
+#define SendPacketTime 0.1
+
+#define NSLocalStr(key) [[NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults] objectForKey:@"AppLanguage"]] ofType:@"lproj"]] localizedStringForKey:(key) value:@"" table:nil]
+
+#define MainWidth [UIScreen mainScreen].bounds.size.width
+#define MainHeight [UIScreen mainScreen].bounds.size.height
+#define kGrayColor  [UIColor colorWithRed:213/255.0 green:213/255.0 blue:213/255.0 alpha:1]
+#define KeyWindow [UIApplication sharedApplication].keyWindow
+
+//颜色
+#define kMainColor 
+
+#define kGrayColor  [UIColor colorWithRed:213/255.0 green:213/255.0 blue:213/255.0 alpha:1]
+//调试代码
+#ifdef DEBUG //-->调试宏 调试模式(Debug)下系统会自动定义，在上线、发布(release)模式 不会定义
+//定义一个变参宏  __VA_ARGS__可以接受变参宏的参数
+#define NSLog(...) NSLog(__VA_ARGS__)
+#else
+#define NSLog(...)
+#endif
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "Notification.h"
+
+#import "UIView+Extension.h"
+#import "CATransition+Extension2.h"
+#import "UIColor+HEX.h"
+
+#import "DeviceEntity.h"
+#import "DataSource.h"
+
+
+#pragma mark C
+#ifdef __OBJC__
+
+#endif
+
+#endif /* PrefixHeader_pch */

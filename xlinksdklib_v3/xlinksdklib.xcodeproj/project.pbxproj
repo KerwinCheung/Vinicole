@@ -1,0 +1,722 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		353187C21B7C140800C6E566 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 353187C11B7C140800C6E566 /* Utils.m */; };
+		353EB1081B50CF55009C8EDE /* AutoReloginTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 353EB1071B50CF55009C8EDE /* AutoReloginTask.m */; };
+		355E40F61BB3E152000FC367 /* XSendBufferQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 355E40F51BB3E152000FC367 /* XSendBufferQueue.m */; };
+		355E40F91BB3E16B000FC367 /* XSendBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 355E40F81BB3E16B000FC367 /* XSendBuffer.m */; };
+		35A8D9021B7CA82000D3A1BC /* MessageTraceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A8D9011B7CA82000D3A1BC /* MessageTraceItem.m */; };
+		35AEB7CD1B818E200018F81D /* SDKProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AEB7CC1B818E200018F81D /* SDKProperty.m */; };
+		35DA9C091B52102200BC322B /* XLinkExportObject.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 56B93DCE1AA3F2C000D7F9C4 /* XLinkExportObject.h */; };
+		35DA9C0B1B52111B00BC322B /* libxlinksdklib.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = 56A566791AA331380049883A /* libxlinksdklib.a */; };
+		35E0BFEF1B03482C004E6AED /* XLinkCoreObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A566E71AA331A30049883A /* XLinkCoreObject.m */; };
+		564E7EE21AA9C88900DC060B /* SetPSWDPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 564E7EE11AA9C88900DC060B /* SetPSWDPacket.m */; };
+		564E7EE51AA9C8AB00DC060B /* SetPSWDReturnPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 564E7EE41AA9C8AB00DC060B /* SetPSWDReturnPacket.m */; };
+		564E7EE81AA9D07500DC060B /* ShakeHandWithPSWDPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 564E7EE71AA9D07500DC060B /* ShakeHandWithPSWDPacket.m */; };
+		564E7EEE1AA9D97700DC060B /* CloudSetPWDPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 564E7EED1AA9D97700DC060B /* CloudSetPWDPacket.m */; };
+		564E7EF11AA9D99400DC060B /* CloudSetPWDReturnPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 564E7EF01AA9D99400DC060B /* CloudSetPWDReturnPacket.m */; };
+		56A36B5A1AA7E69900EDF9C6 /* PipeTwoPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A36B591AA7E69900EDF9C6 /* PipeTwoPacket.m */; };
+		56A36B5D1AA7E6BE00EDF9C6 /* PipeTwoReturnPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A36B5C1AA7E6BE00EDF9C6 /* PipeTwoReturnPacket.m */; };
+		56A566E81AA331A30049883A /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A566951AA331A20049883A /* AsyncUdpSocket.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		56A566EB1AA331A30049883A /* DeviceEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A5669B1AA331A20049883A /* DeviceEntity.m */; };
+		56A566EC1AA331A30049883A /* ActivatePacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A5669E1AA331A20049883A /* ActivatePacket.m */; };
+		56A566ED1AA331A30049883A /* ActivateReturnPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A566A01AA331A20049883A /* ActivateReturnPacket.m */; };
+		56A566EE1AA331A30049883A /* ConnectPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A566A21AA331A20049883A /* ConnectPacket.m */; };
+		56A566EF1AA331A30049883A /* ConnectReturnPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A566A41AA331A20049883A /* ConnectReturnPacket.m */; };
+		56A566F01AA331A30049883A /* ExtFixHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A566A61AA331A30049883A /* ExtFixHeader.m */; };
+		56A566F11AA331A30049883A /* LoginPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A566A91AA331A30049883A /* LoginPacket.m */; };
+		56A566F21AA331A30049883A /* PipePacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A566AB1AA331A30049883A /* PipePacket.m */; };
+		56A566F31AA331A30049883A /* PipeReturnPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A566AD1AA331A30049883A /* PipeReturnPacket.m */; };
+		56A566F41AA331A30049883A /* SetExtPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A566AF1AA331A30049883A /* SetExtPacket.m */; };
+		56A566F51AA331A30049883A /* SetExtReturnPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A566B11AA331A30049883A /* SetExtReturnPacket.m */; };
+		56A566FA1AA331A30049883A /* ExtPacketParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A566BB1AA331A30049883A /* ExtPacketParse.m */; };
+		56A566FB1AA331A30049883A /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A566BD1AA331A30049883A /* GCDAsyncSocket.m */; };
+		56A566FC1AA331A30049883A /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A566BF1AA331A30049883A /* GCDAsyncUdpSocket.m */; };
+		56A566FE1AA331A30049883A /* PacketParseEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A566C31AA331A30049883A /* PacketParseEngine.m */; };
+		56A566FF1AA331A30049883A /* AppPipeDevicePacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A566C61AA331A30049883A /* AppPipeDevicePacket.m */; };
+		56A567001AA331A30049883A /* DevicePipeAppPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A566C81AA331A30049883A /* DevicePipeAppPacket.m */; };
+		56A567011AA331A30049883A /* FixHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A566CA1AA331A30049883A /* FixHeader.m */; };
+		56A567041AA331A30049883A /* LocalPipeReturnPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A566D01AA331A30049883A /* LocalPipeReturnPacket.m */; };
+		56A567051AA331A30049883A /* PingPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A566D21AA331A30049883A /* PingPacket.m */; };
+		56A567061AA331A30049883A /* ProbeHeaderPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A566D41AA331A30049883A /* ProbeHeaderPacket.m */; };
+		56A567071AA331A30049883A /* ScanHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A566D61AA331A30049883A /* ScanHeader.m */; };
+		56A567091AA331A30049883A /* SetHeaderPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A566DA1AA331A30049883A /* SetHeaderPacket.m */; };
+		56A5670A1AA331A30049883A /* SetResponsePacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A566DC1AA331A30049883A /* SetResponsePacket.m */; };
+		56A5670B1AA331A30049883A /* SyncRetHeaderPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A566DE1AA331A30049883A /* SyncRetHeaderPacket.m */; };
+		56A5670E1AA331A30049883A /* SenderEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A566E51AA331A30049883A /* SenderEngine.m */; };
+		56B93DD01AA3F2C000D7F9C4 /* XLinkExportObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B93DCF1AA3F2C000D7F9C4 /* XLinkExportObject.m */; };
+		56BA46051ACA2EA9005A0A80 /* WebcommandsParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BA46041ACA2EA9005A0A80 /* WebcommandsParse.m */; };
+		56CB05861AB96A7700153EA0 /* ConnectDeviceTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 56CB05851AB96A7700153EA0 /* ConnectDeviceTask.m */; };
+		56DCCA3A1AB169220004F4BA /* XlinkMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DCCA391AB169220004F4BA /* XlinkMessage.m */; };
+		56E24BCE1AAA989B00359EC3 /* SubscribeByAuthReturnPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E24BCD1AAA989B00359EC3 /* SubscribeByAuthReturnPacket.m */; };
+		56E24BD11AAAA45800359EC3 /* CloudSetAuthPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E24BD01AAAA45800359EC3 /* CloudSetAuthPacket.m */; };
+		56E24BD41AAAA47400359EC3 /* CloudSetAuthReturnPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E24BD31AAAA47400359EC3 /* CloudSetAuthReturnPacket.m */; };
+		56E24BD71AAACE3B00359EC3 /* CloudProbePacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E24BD61AAACE3B00359EC3 /* CloudProbePacket.m */; };
+		56E24BDA1AAACE6D00359EC3 /* CloudProbeReturnPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E24BD91AAACE6D00359EC3 /* CloudProbeReturnPacket.m */; };
+		654938491AF8BF73006F036F /* SyncCloudHeaderPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 654938481AF8BF73006F036F /* SyncCloudHeaderPacket.m */; };
+		656C2ACF1C3CED8100D4F160 /* NotifyRetPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 656C2ACE1C3CED8000D4F160 /* NotifyRetPacket.m */; };
+		65920A5E1C1E6804007510F7 /* SetACKPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 65920A5D1C1E6804007510F7 /* SetACKPacket.m */; };
+		65920A611C1E681E007510F7 /* SetACKReturnPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 65920A601C1E681E007510F7 /* SetACKReturnPacket.m */; };
+		65BEA3CC1B54B59000CDD58C /* DeviceEntity.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 56A5669A1AA331A20049883A /* DeviceEntity.h */; };
+		65E733791B8CA17C0099087F /* XLReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E733781B8CA17C0099087F /* XLReachability.m */; };
+		E51B67741D2B49E2002E75C9 /* DataPointEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = E51B67731D2B49E2002E75C9 /* DataPointEntity.m */; };
+		E51B67751D2B4FEA002E75C9 /* DataPointEntity.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = E51B67721D2B49E2002E75C9 /* DataPointEntity.h */; };
+		E521CFA01D012CA600F1D768 /* PingRetPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = E521CF9F1D012CA600F1D768 /* PingRetPacket.m */; };
+		E521CFA31D01311F00F1D768 /* HandShakeRetPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = E521CFA21D01311F00F1D768 /* HandShakeRetPacket.m */; };
+		E521CFA81D01669500F1D768 /* SetLocalDataPointPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = E521CFA51D01669500F1D768 /* SetLocalDataPointPacket.m */; };
+		E521CFA91D01669500F1D768 /* SetLocalDataPointReturnPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = E521CFA71D01669500F1D768 /* SetLocalDataPointReturnPacket.m */; };
+		E521CFAE1D0166BF00F1D768 /* SetCloudDataPointPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = E521CFAB1D0166BF00F1D768 /* SetCloudDataPointPacket.m */; };
+		E521CFAF1D0166BF00F1D768 /* SetCloudDataPointReturnPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = E521CFAD1D0166BF00F1D768 /* SetCloudDataPointReturnPacket.m */; };
+		E575527D1CEC53E9001930A7 /* SubKeyHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = E575527C1CEC53E9001930A7 /* SubKeyHeader.m */; };
+		E57552801CEC53F9001930A7 /* SubKeyReturnHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = E575527F1CEC53F9001930A7 /* SubKeyReturnHeader.m */; };
+		E5814EE41CEC9F59001AD18F /* SubscribeByAuthPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = E5814EE31CEC9F59001AD18F /* SubscribeByAuthPacket.m */; };
+		E59DEF571CED68B400A3654A /* ScanReturnPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = E59DEF561CED68B400A3654A /* ScanReturnPacket.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		35DA9C071B520FAA00BC322B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = ../publish/libxlink/include;
+			dstSubfolderSpec = 16;
+			files = (
+				E51B67751D2B4FEA002E75C9 /* DataPointEntity.h in CopyFiles */,
+				65BEA3CC1B54B59000CDD58C /* DeviceEntity.h in CopyFiles */,
+				35DA9C091B52102200BC322B /* XLinkExportObject.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35DA9C0A1B52110400BC322B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "../publish/libxlink/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				35DA9C0B1B52111B00BC322B /* libxlinksdklib.a in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56A566771AA331380049883A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		353187C01B7C140800C6E566 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		353187C11B7C140800C6E566 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		353EB1061B50CF55009C8EDE /* AutoReloginTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoReloginTask.h; sourceTree = "<group>"; };
+		353EB1071B50CF55009C8EDE /* AutoReloginTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoReloginTask.m; sourceTree = "<group>"; };
+		355E40F41BB3E152000FC367 /* XSendBufferQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSendBufferQueue.h; sourceTree = "<group>"; };
+		355E40F51BB3E152000FC367 /* XSendBufferQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSendBufferQueue.m; sourceTree = "<group>"; };
+		355E40F71BB3E16B000FC367 /* XSendBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSendBuffer.h; sourceTree = "<group>"; };
+		355E40F81BB3E16B000FC367 /* XSendBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSendBuffer.m; sourceTree = "<group>"; };
+		35A8D9001B7CA82000D3A1BC /* MessageTraceItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTraceItem.h; sourceTree = "<group>"; };
+		35A8D9011B7CA82000D3A1BC /* MessageTraceItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTraceItem.m; sourceTree = "<group>"; };
+		35AEB7CB1B818E200018F81D /* SDKProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDKProperty.h; path = ../SDKProperty.h; sourceTree = "<group>"; };
+		35AEB7CC1B818E200018F81D /* SDKProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDKProperty.m; path = ../SDKProperty.m; sourceTree = "<group>"; };
+		560CAB001ADB5B3700A3F9D7 /* SDK设计文档.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = "SDK设计文档.strings"; sourceTree = "<group>"; };
+		564E7EE01AA9C88900DC060B /* SetPSWDPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetPSWDPacket.h; sourceTree = "<group>"; };
+		564E7EE11AA9C88900DC060B /* SetPSWDPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetPSWDPacket.m; sourceTree = "<group>"; };
+		564E7EE31AA9C8AB00DC060B /* SetPSWDReturnPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetPSWDReturnPacket.h; sourceTree = "<group>"; };
+		564E7EE41AA9C8AB00DC060B /* SetPSWDReturnPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetPSWDReturnPacket.m; sourceTree = "<group>"; };
+		564E7EE61AA9D07500DC060B /* ShakeHandWithPSWDPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShakeHandWithPSWDPacket.h; sourceTree = "<group>"; };
+		564E7EE71AA9D07500DC060B /* ShakeHandWithPSWDPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShakeHandWithPSWDPacket.m; sourceTree = "<group>"; };
+		564E7EEC1AA9D97700DC060B /* CloudSetPWDPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudSetPWDPacket.h; sourceTree = "<group>"; };
+		564E7EED1AA9D97700DC060B /* CloudSetPWDPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudSetPWDPacket.m; sourceTree = "<group>"; };
+		564E7EEF1AA9D99400DC060B /* CloudSetPWDReturnPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudSetPWDReturnPacket.h; sourceTree = "<group>"; };
+		564E7EF01AA9D99400DC060B /* CloudSetPWDReturnPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudSetPWDReturnPacket.m; sourceTree = "<group>"; };
+		568DC8451AC2A0A5009638FD /* rsa_public_key.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rsa_public_key.pem; sourceTree = "<group>"; };
+		568DC8461AC2A0A5009638FD /* rsa_private_key.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rsa_private_key.pem; sourceTree = "<group>"; };
+		56A36B581AA7E69900EDF9C6 /* PipeTwoPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PipeTwoPacket.h; sourceTree = "<group>"; };
+		56A36B591AA7E69900EDF9C6 /* PipeTwoPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PipeTwoPacket.m; sourceTree = "<group>"; };
+		56A36B5B1AA7E6BE00EDF9C6 /* PipeTwoReturnPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PipeTwoReturnPacket.h; sourceTree = "<group>"; };
+		56A36B5C1AA7E6BE00EDF9C6 /* PipeTwoReturnPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PipeTwoReturnPacket.m; sourceTree = "<group>"; };
+		56A566791AA331380049883A /* libxlinksdklib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libxlinksdklib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		56A566941AA331A20049883A /* AsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncUdpSocket.h; sourceTree = "<group>"; };
+		56A566951AA331A20049883A /* AsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncUdpSocket.m; sourceTree = "<group>"; };
+		56A5669A1AA331A20049883A /* DeviceEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceEntity.h; sourceTree = "<group>"; };
+		56A5669B1AA331A20049883A /* DeviceEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceEntity.m; sourceTree = "<group>"; };
+		56A5669D1AA331A20049883A /* ActivatePacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivatePacket.h; sourceTree = "<group>"; };
+		56A5669E1AA331A20049883A /* ActivatePacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivatePacket.m; sourceTree = "<group>"; };
+		56A5669F1AA331A20049883A /* ActivateReturnPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivateReturnPacket.h; sourceTree = "<group>"; };
+		56A566A01AA331A20049883A /* ActivateReturnPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivateReturnPacket.m; sourceTree = "<group>"; };
+		56A566A11AA331A20049883A /* ConnectPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectPacket.h; sourceTree = "<group>"; };
+		56A566A21AA331A20049883A /* ConnectPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectPacket.m; sourceTree = "<group>"; };
+		56A566A31AA331A20049883A /* ConnectReturnPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectReturnPacket.h; sourceTree = "<group>"; };
+		56A566A41AA331A20049883A /* ConnectReturnPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectReturnPacket.m; sourceTree = "<group>"; };
+		56A566A51AA331A30049883A /* ExtFixHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtFixHeader.h; sourceTree = "<group>"; };
+		56A566A61AA331A30049883A /* ExtFixHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtFixHeader.m; sourceTree = "<group>"; };
+		56A566A71AA331A30049883A /* ExtHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExtHeader.h; path = ExternalNetProtocol/ExtHeader.h; sourceTree = "<group>"; };
+		56A566A81AA331A30049883A /* LoginPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginPacket.h; sourceTree = "<group>"; };
+		56A566A91AA331A30049883A /* LoginPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginPacket.m; sourceTree = "<group>"; };
+		56A566AA1AA331A30049883A /* PipePacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PipePacket.h; sourceTree = "<group>"; };
+		56A566AB1AA331A30049883A /* PipePacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PipePacket.m; sourceTree = "<group>"; };
+		56A566AC1AA331A30049883A /* PipeReturnPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PipeReturnPacket.h; sourceTree = "<group>"; };
+		56A566AD1AA331A30049883A /* PipeReturnPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PipeReturnPacket.m; sourceTree = "<group>"; };
+		56A566AE1AA331A30049883A /* SetExtPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetExtPacket.h; sourceTree = "<group>"; };
+		56A566AF1AA331A30049883A /* SetExtPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetExtPacket.m; sourceTree = "<group>"; };
+		56A566B01AA331A30049883A /* SetExtReturnPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetExtReturnPacket.h; sourceTree = "<group>"; };
+		56A566B11AA331A30049883A /* SetExtReturnPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetExtReturnPacket.m; sourceTree = "<group>"; };
+		56A566BA1AA331A30049883A /* ExtPacketParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtPacketParse.h; sourceTree = "<group>"; };
+		56A566BB1AA331A30049883A /* ExtPacketParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtPacketParse.m; sourceTree = "<group>"; };
+		56A566BC1AA331A30049883A /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		56A566BD1AA331A30049883A /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		56A566BE1AA331A30049883A /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		56A566BF1AA331A30049883A /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		56A566C21AA331A30049883A /* PacketParseEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PacketParseEngine.h; sourceTree = "<group>"; };
+		56A566C31AA331A30049883A /* PacketParseEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PacketParseEngine.m; sourceTree = "<group>"; };
+		56A566C51AA331A30049883A /* AppPipeDevicePacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppPipeDevicePacket.h; sourceTree = "<group>"; };
+		56A566C61AA331A30049883A /* AppPipeDevicePacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppPipeDevicePacket.m; sourceTree = "<group>"; };
+		56A566C71AA331A30049883A /* DevicePipeAppPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DevicePipeAppPacket.h; sourceTree = "<group>"; };
+		56A566C81AA331A30049883A /* DevicePipeAppPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DevicePipeAppPacket.m; sourceTree = "<group>"; };
+		56A566C91AA331A30049883A /* FixHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FixHeader.h; sourceTree = "<group>"; };
+		56A566CA1AA331A30049883A /* FixHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FixHeader.m; sourceTree = "<group>"; };
+		56A566CF1AA331A30049883A /* LocalPipeReturnPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalPipeReturnPacket.h; sourceTree = "<group>"; };
+		56A566D01AA331A30049883A /* LocalPipeReturnPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalPipeReturnPacket.m; sourceTree = "<group>"; };
+		56A566D11AA331A30049883A /* PingPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PingPacket.h; sourceTree = "<group>"; };
+		56A566D21AA331A30049883A /* PingPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PingPacket.m; sourceTree = "<group>"; };
+		56A566D31AA331A30049883A /* ProbeHeaderPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProbeHeaderPacket.h; sourceTree = "<group>"; };
+		56A566D41AA331A30049883A /* ProbeHeaderPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProbeHeaderPacket.m; sourceTree = "<group>"; };
+		56A566D51AA331A30049883A /* ScanHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanHeader.h; sourceTree = "<group>"; };
+		56A566D61AA331A30049883A /* ScanHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanHeader.m; sourceTree = "<group>"; };
+		56A566D91AA331A30049883A /* SetHeaderPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetHeaderPacket.h; sourceTree = "<group>"; };
+		56A566DA1AA331A30049883A /* SetHeaderPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetHeaderPacket.m; sourceTree = "<group>"; };
+		56A566DB1AA331A30049883A /* SetResponsePacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetResponsePacket.h; sourceTree = "<group>"; };
+		56A566DC1AA331A30049883A /* SetResponsePacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetResponsePacket.m; sourceTree = "<group>"; };
+		56A566DD1AA331A30049883A /* SyncRetHeaderPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SyncRetHeaderPacket.h; sourceTree = "<group>"; };
+		56A566DE1AA331A30049883A /* SyncRetHeaderPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SyncRetHeaderPacket.m; sourceTree = "<group>"; };
+		56A566E31AA331A30049883A /* SDKHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDKHeader.h; sourceTree = "<group>"; };
+		56A566E41AA331A30049883A /* SenderEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SenderEngine.h; sourceTree = "<group>"; };
+		56A566E51AA331A30049883A /* SenderEngine.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; path = SenderEngine.m; sourceTree = "<group>"; };
+		56A566E61AA331A30049883A /* XLinkCoreObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLinkCoreObject.h; sourceTree = "<group>"; };
+		56A566E71AA331A30049883A /* XLinkCoreObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLinkCoreObject.m; sourceTree = "<group>"; };
+		56B93DCE1AA3F2C000D7F9C4 /* XLinkExportObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLinkExportObject.h; sourceTree = "<group>"; };
+		56B93DCF1AA3F2C000D7F9C4 /* XLinkExportObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLinkExportObject.m; sourceTree = "<group>"; };
+		56BA46031ACA2EA9005A0A80 /* WebcommandsParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebcommandsParse.h; sourceTree = "<group>"; };
+		56BA46041ACA2EA9005A0A80 /* WebcommandsParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebcommandsParse.m; sourceTree = "<group>"; };
+		56CB05841AB96A7700153EA0 /* ConnectDeviceTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectDeviceTask.h; sourceTree = "<group>"; };
+		56CB05851AB96A7700153EA0 /* ConnectDeviceTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectDeviceTask.m; sourceTree = "<group>"; };
+		56DCCA381AB169220004F4BA /* XlinkMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XlinkMessage.h; sourceTree = "<group>"; };
+		56DCCA391AB169220004F4BA /* XlinkMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XlinkMessage.m; sourceTree = "<group>"; };
+		56E24BCC1AAA989B00359EC3 /* SubscribeByAuthReturnPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscribeByAuthReturnPacket.h; sourceTree = "<group>"; };
+		56E24BCD1AAA989B00359EC3 /* SubscribeByAuthReturnPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscribeByAuthReturnPacket.m; sourceTree = "<group>"; };
+		56E24BCF1AAAA45800359EC3 /* CloudSetAuthPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudSetAuthPacket.h; sourceTree = "<group>"; };
+		56E24BD01AAAA45800359EC3 /* CloudSetAuthPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudSetAuthPacket.m; sourceTree = "<group>"; };
+		56E24BD21AAAA47400359EC3 /* CloudSetAuthReturnPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudSetAuthReturnPacket.h; sourceTree = "<group>"; };
+		56E24BD31AAAA47400359EC3 /* CloudSetAuthReturnPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudSetAuthReturnPacket.m; sourceTree = "<group>"; };
+		56E24BD51AAACE3B00359EC3 /* CloudProbePacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudProbePacket.h; sourceTree = "<group>"; };
+		56E24BD61AAACE3B00359EC3 /* CloudProbePacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudProbePacket.m; sourceTree = "<group>"; };
+		56E24BD81AAACE6D00359EC3 /* CloudProbeReturnPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudProbeReturnPacket.h; sourceTree = "<group>"; };
+		56E24BD91AAACE6D00359EC3 /* CloudProbeReturnPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudProbeReturnPacket.m; sourceTree = "<group>"; };
+		654938471AF8BF73006F036F /* SyncCloudHeaderPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SyncCloudHeaderPacket.h; path = ../ProtocolHeader/SyncCloudHeaderPacket.h; sourceTree = "<group>"; };
+		654938481AF8BF73006F036F /* SyncCloudHeaderPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SyncCloudHeaderPacket.m; path = ../ProtocolHeader/SyncCloudHeaderPacket.m; sourceTree = "<group>"; };
+		656C2ACD1C3CED8000D4F160 /* NotifyRetPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyRetPacket.h; sourceTree = "<group>"; };
+		656C2ACE1C3CED8000D4F160 /* NotifyRetPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotifyRetPacket.m; sourceTree = "<group>"; };
+		65920A5C1C1E6804007510F7 /* SetACKPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetACKPacket.h; sourceTree = "<group>"; };
+		65920A5D1C1E6804007510F7 /* SetACKPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetACKPacket.m; sourceTree = "<group>"; };
+		65920A5F1C1E681E007510F7 /* SetACKReturnPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetACKReturnPacket.h; sourceTree = "<group>"; };
+		65920A601C1E681E007510F7 /* SetACKReturnPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetACKReturnPacket.m; sourceTree = "<group>"; };
+		65E733771B8CA17C0099087F /* XLReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLReachability.h; sourceTree = "<group>"; };
+		65E733781B8CA17C0099087F /* XLReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLReachability.m; sourceTree = "<group>"; };
+		E51B67721D2B49E2002E75C9 /* DataPointEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataPointEntity.h; sourceTree = "<group>"; };
+		E51B67731D2B49E2002E75C9 /* DataPointEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataPointEntity.m; sourceTree = "<group>"; };
+		E521CF9E1D012CA600F1D768 /* PingRetPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PingRetPacket.h; sourceTree = "<group>"; };
+		E521CF9F1D012CA600F1D768 /* PingRetPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PingRetPacket.m; sourceTree = "<group>"; };
+		E521CFA11D01311F00F1D768 /* HandShakeRetPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandShakeRetPacket.h; sourceTree = "<group>"; };
+		E521CFA21D01311F00F1D768 /* HandShakeRetPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandShakeRetPacket.m; sourceTree = "<group>"; };
+		E521CFA41D01669500F1D768 /* SetLocalDataPointPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetLocalDataPointPacket.h; sourceTree = "<group>"; };
+		E521CFA51D01669500F1D768 /* SetLocalDataPointPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetLocalDataPointPacket.m; sourceTree = "<group>"; };
+		E521CFA61D01669500F1D768 /* SetLocalDataPointReturnPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetLocalDataPointReturnPacket.h; sourceTree = "<group>"; };
+		E521CFA71D01669500F1D768 /* SetLocalDataPointReturnPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetLocalDataPointReturnPacket.m; sourceTree = "<group>"; };
+		E521CFAA1D0166BF00F1D768 /* SetCloudDataPointPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetCloudDataPointPacket.h; sourceTree = "<group>"; };
+		E521CFAB1D0166BF00F1D768 /* SetCloudDataPointPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetCloudDataPointPacket.m; sourceTree = "<group>"; };
+		E521CFAC1D0166BF00F1D768 /* SetCloudDataPointReturnPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetCloudDataPointReturnPacket.h; sourceTree = "<group>"; };
+		E521CFAD1D0166BF00F1D768 /* SetCloudDataPointReturnPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetCloudDataPointReturnPacket.m; sourceTree = "<group>"; };
+		E575527B1CEC53E9001930A7 /* SubKeyHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubKeyHeader.h; sourceTree = "<group>"; };
+		E575527C1CEC53E9001930A7 /* SubKeyHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubKeyHeader.m; sourceTree = "<group>"; };
+		E575527E1CEC53F9001930A7 /* SubKeyReturnHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubKeyReturnHeader.h; sourceTree = "<group>"; };
+		E575527F1CEC53F9001930A7 /* SubKeyReturnHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubKeyReturnHeader.m; sourceTree = "<group>"; };
+		E5814EE21CEC9F59001AD18F /* SubscribeByAuthPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscribeByAuthPacket.h; sourceTree = "<group>"; };
+		E5814EE31CEC9F59001AD18F /* SubscribeByAuthPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscribeByAuthPacket.m; sourceTree = "<group>"; };
+		E59DEF551CED68B400A3654A /* ScanReturnPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanReturnPacket.h; sourceTree = "<group>"; };
+		E59DEF561CED68B400A3654A /* ScanReturnPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanReturnPacket.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		56A566761AA331380049883A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		355E40F31BB3E12E000FC367 /* SendBufferQueue */ = {
+			isa = PBXGroup;
+			children = (
+				355E40F71BB3E16B000FC367 /* XSendBuffer.h */,
+				355E40F81BB3E16B000FC367 /* XSendBuffer.m */,
+				355E40F41BB3E152000FC367 /* XSendBufferQueue.h */,
+				355E40F51BB3E152000FC367 /* XSendBufferQueue.m */,
+			);
+			name = SendBufferQueue;
+			sourceTree = "<group>";
+		};
+		56A566701AA331380049883A = {
+			isa = PBXGroup;
+			children = (
+				56A5667B1AA331380049883A /* xlinksdklib */,
+				56A5667A1AA331380049883A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		56A5667A1AA331380049883A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				56A566791AA331380049883A /* libxlinksdklib.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		56A5667B1AA331380049883A /* xlinksdklib */ = {
+			isa = PBXGroup;
+			children = (
+				56A566931AA331A20049883A /* SDKlib */,
+				560CAB001ADB5B3700A3F9D7 /* SDK设计文档.strings */,
+			);
+			path = xlinksdklib;
+			sourceTree = "<group>";
+		};
+		56A566931AA331A20049883A /* SDKlib */ = {
+			isa = PBXGroup;
+			children = (
+				355E40F31BB3E12E000FC367 /* SendBufferQueue */,
+				568DC8451AC2A0A5009638FD /* rsa_public_key.pem */,
+				568DC8461AC2A0A5009638FD /* rsa_private_key.pem */,
+				56CF8E731AAFCEDD000E09CD /* libs */,
+				56A566C41AA331A30049883A /* ProtocolHeader */,
+				56A5669C1AA331A20049883A /* ExternalNetProtocol */,
+				56A566E31AA331A30049883A /* SDKHeader.h */,
+				56A566A71AA331A30049883A /* ExtHeader.h */,
+				353187C01B7C140800C6E566 /* Utils.h */,
+				353187C11B7C140800C6E566 /* Utils.m */,
+				35AEB7CB1B818E200018F81D /* SDKProperty.h */,
+				35AEB7CC1B818E200018F81D /* SDKProperty.m */,
+				35A8D9001B7CA82000D3A1BC /* MessageTraceItem.h */,
+				35A8D9011B7CA82000D3A1BC /* MessageTraceItem.m */,
+				56A566C21AA331A30049883A /* PacketParseEngine.h */,
+				56A566C31AA331A30049883A /* PacketParseEngine.m */,
+				56A566BA1AA331A30049883A /* ExtPacketParse.h */,
+				56A566BB1AA331A30049883A /* ExtPacketParse.m */,
+				56BA46031ACA2EA9005A0A80 /* WebcommandsParse.h */,
+				56BA46041ACA2EA9005A0A80 /* WebcommandsParse.m */,
+				56CB05841AB96A7700153EA0 /* ConnectDeviceTask.h */,
+				56CB05851AB96A7700153EA0 /* ConnectDeviceTask.m */,
+				56DCCA381AB169220004F4BA /* XlinkMessage.h */,
+				56DCCA391AB169220004F4BA /* XlinkMessage.m */,
+				56A5669A1AA331A20049883A /* DeviceEntity.h */,
+				56A5669B1AA331A20049883A /* DeviceEntity.m */,
+				E51B67721D2B49E2002E75C9 /* DataPointEntity.h */,
+				E51B67731D2B49E2002E75C9 /* DataPointEntity.m */,
+				56A566E41AA331A30049883A /* SenderEngine.h */,
+				56A566E51AA331A30049883A /* SenderEngine.m */,
+				56A566E61AA331A30049883A /* XLinkCoreObject.h */,
+				56A566E71AA331A30049883A /* XLinkCoreObject.m */,
+				56B93DCE1AA3F2C000D7F9C4 /* XLinkExportObject.h */,
+				56B93DCF1AA3F2C000D7F9C4 /* XLinkExportObject.m */,
+				353EB1061B50CF55009C8EDE /* AutoReloginTask.h */,
+				353EB1071B50CF55009C8EDE /* AutoReloginTask.m */,
+			);
+			path = SDKlib;
+			sourceTree = "<group>";
+		};
+		56A5669C1AA331A20049883A /* ExternalNetProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				56A5669D1AA331A20049883A /* ActivatePacket.h */,
+				56A5669E1AA331A20049883A /* ActivatePacket.m */,
+				56A5669F1AA331A20049883A /* ActivateReturnPacket.h */,
+				56A566A01AA331A20049883A /* ActivateReturnPacket.m */,
+				56A566A11AA331A20049883A /* ConnectPacket.h */,
+				56A566A21AA331A20049883A /* ConnectPacket.m */,
+				56A566A31AA331A20049883A /* ConnectReturnPacket.h */,
+				56A566A41AA331A20049883A /* ConnectReturnPacket.m */,
+				56A566A51AA331A30049883A /* ExtFixHeader.h */,
+				56A566A61AA331A30049883A /* ExtFixHeader.m */,
+				56A566A81AA331A30049883A /* LoginPacket.h */,
+				56A566A91AA331A30049883A /* LoginPacket.m */,
+				56A566AA1AA331A30049883A /* PipePacket.h */,
+				56A566AB1AA331A30049883A /* PipePacket.m */,
+				56A566AC1AA331A30049883A /* PipeReturnPacket.h */,
+				56A566AD1AA331A30049883A /* PipeReturnPacket.m */,
+				56A36B581AA7E69900EDF9C6 /* PipeTwoPacket.h */,
+				56A36B591AA7E69900EDF9C6 /* PipeTwoPacket.m */,
+				56A36B5B1AA7E6BE00EDF9C6 /* PipeTwoReturnPacket.h */,
+				56A36B5C1AA7E6BE00EDF9C6 /* PipeTwoReturnPacket.m */,
+				56A566AE1AA331A30049883A /* SetExtPacket.h */,
+				56A566AF1AA331A30049883A /* SetExtPacket.m */,
+				56A566B01AA331A30049883A /* SetExtReturnPacket.h */,
+				56A566B11AA331A30049883A /* SetExtReturnPacket.m */,
+				654938471AF8BF73006F036F /* SyncCloudHeaderPacket.h */,
+				654938481AF8BF73006F036F /* SyncCloudHeaderPacket.m */,
+				564E7EEC1AA9D97700DC060B /* CloudSetPWDPacket.h */,
+				564E7EED1AA9D97700DC060B /* CloudSetPWDPacket.m */,
+				564E7EEF1AA9D99400DC060B /* CloudSetPWDReturnPacket.h */,
+				564E7EF01AA9D99400DC060B /* CloudSetPWDReturnPacket.m */,
+				E5814EE21CEC9F59001AD18F /* SubscribeByAuthPacket.h */,
+				E5814EE31CEC9F59001AD18F /* SubscribeByAuthPacket.m */,
+				56E24BCC1AAA989B00359EC3 /* SubscribeByAuthReturnPacket.h */,
+				56E24BCD1AAA989B00359EC3 /* SubscribeByAuthReturnPacket.m */,
+				56E24BCF1AAAA45800359EC3 /* CloudSetAuthPacket.h */,
+				56E24BD01AAAA45800359EC3 /* CloudSetAuthPacket.m */,
+				56E24BD21AAAA47400359EC3 /* CloudSetAuthReturnPacket.h */,
+				56E24BD31AAAA47400359EC3 /* CloudSetAuthReturnPacket.m */,
+				56E24BD51AAACE3B00359EC3 /* CloudProbePacket.h */,
+				56E24BD61AAACE3B00359EC3 /* CloudProbePacket.m */,
+				56E24BD81AAACE6D00359EC3 /* CloudProbeReturnPacket.h */,
+				56E24BD91AAACE6D00359EC3 /* CloudProbeReturnPacket.m */,
+				656C2ACD1C3CED8000D4F160 /* NotifyRetPacket.h */,
+				656C2ACE1C3CED8000D4F160 /* NotifyRetPacket.m */,
+				E521CFAA1D0166BF00F1D768 /* SetCloudDataPointPacket.h */,
+				E521CFAB1D0166BF00F1D768 /* SetCloudDataPointPacket.m */,
+				E521CFAC1D0166BF00F1D768 /* SetCloudDataPointReturnPacket.h */,
+				E521CFAD1D0166BF00F1D768 /* SetCloudDataPointReturnPacket.m */,
+			);
+			path = ExternalNetProtocol;
+			sourceTree = "<group>";
+		};
+		56A566C41AA331A30049883A /* ProtocolHeader */ = {
+			isa = PBXGroup;
+			children = (
+				56A566C91AA331A30049883A /* FixHeader.h */,
+				56A566CA1AA331A30049883A /* FixHeader.m */,
+				56A566D51AA331A30049883A /* ScanHeader.h */,
+				56A566D61AA331A30049883A /* ScanHeader.m */,
+				E59DEF551CED68B400A3654A /* ScanReturnPacket.h */,
+				E59DEF561CED68B400A3654A /* ScanReturnPacket.m */,
+				564E7EE61AA9D07500DC060B /* ShakeHandWithPSWDPacket.h */,
+				564E7EE71AA9D07500DC060B /* ShakeHandWithPSWDPacket.m */,
+				E521CFA11D01311F00F1D768 /* HandShakeRetPacket.h */,
+				E521CFA21D01311F00F1D768 /* HandShakeRetPacket.m */,
+				56A566D31AA331A30049883A /* ProbeHeaderPacket.h */,
+				56A566D41AA331A30049883A /* ProbeHeaderPacket.m */,
+				56A566D91AA331A30049883A /* SetHeaderPacket.h */,
+				56A566DA1AA331A30049883A /* SetHeaderPacket.m */,
+				56A566DB1AA331A30049883A /* SetResponsePacket.h */,
+				56A566DC1AA331A30049883A /* SetResponsePacket.m */,
+				56A566DD1AA331A30049883A /* SyncRetHeaderPacket.h */,
+				56A566DE1AA331A30049883A /* SyncRetHeaderPacket.m */,
+				E575527B1CEC53E9001930A7 /* SubKeyHeader.h */,
+				E575527C1CEC53E9001930A7 /* SubKeyHeader.m */,
+				E575527E1CEC53F9001930A7 /* SubKeyReturnHeader.h */,
+				E575527F1CEC53F9001930A7 /* SubKeyReturnHeader.m */,
+				56A566C51AA331A30049883A /* AppPipeDevicePacket.h */,
+				56A566C61AA331A30049883A /* AppPipeDevicePacket.m */,
+				56A566C71AA331A30049883A /* DevicePipeAppPacket.h */,
+				56A566C81AA331A30049883A /* DevicePipeAppPacket.m */,
+				56A566CF1AA331A30049883A /* LocalPipeReturnPacket.h */,
+				56A566D01AA331A30049883A /* LocalPipeReturnPacket.m */,
+				564E7EE01AA9C88900DC060B /* SetPSWDPacket.h */,
+				564E7EE11AA9C88900DC060B /* SetPSWDPacket.m */,
+				564E7EE31AA9C8AB00DC060B /* SetPSWDReturnPacket.h */,
+				564E7EE41AA9C8AB00DC060B /* SetPSWDReturnPacket.m */,
+				65920A5C1C1E6804007510F7 /* SetACKPacket.h */,
+				65920A5D1C1E6804007510F7 /* SetACKPacket.m */,
+				65920A5F1C1E681E007510F7 /* SetACKReturnPacket.h */,
+				65920A601C1E681E007510F7 /* SetACKReturnPacket.m */,
+				56A566D11AA331A30049883A /* PingPacket.h */,
+				56A566D21AA331A30049883A /* PingPacket.m */,
+				E521CF9E1D012CA600F1D768 /* PingRetPacket.h */,
+				E521CF9F1D012CA600F1D768 /* PingRetPacket.m */,
+				E521CFA41D01669500F1D768 /* SetLocalDataPointPacket.h */,
+				E521CFA51D01669500F1D768 /* SetLocalDataPointPacket.m */,
+				E521CFA61D01669500F1D768 /* SetLocalDataPointReturnPacket.h */,
+				E521CFA71D01669500F1D768 /* SetLocalDataPointReturnPacket.m */,
+			);
+			path = ProtocolHeader;
+			sourceTree = "<group>";
+		};
+		56CF8E731AAFCEDD000E09CD /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				65E733771B8CA17C0099087F /* XLReachability.h */,
+				65E733781B8CA17C0099087F /* XLReachability.m */,
+				56A566BC1AA331A30049883A /* GCDAsyncSocket.h */,
+				56A566BD1AA331A30049883A /* GCDAsyncSocket.m */,
+				56A566BE1AA331A30049883A /* GCDAsyncUdpSocket.h */,
+				56A566BF1AA331A30049883A /* GCDAsyncUdpSocket.m */,
+				56A566941AA331A20049883A /* AsyncUdpSocket.h */,
+				56A566951AA331A20049883A /* AsyncUdpSocket.m */,
+			);
+			name = libs;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		56A566781AA331380049883A /* xlinksdklib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 56A5668D1AA331390049883A /* Build configuration list for PBXNativeTarget "xlinksdklib" */;
+			buildPhases = (
+				56A566751AA331380049883A /* Sources */,
+				56A566761AA331380049883A /* Frameworks */,
+				56A566771AA331380049883A /* CopyFiles */,
+				35DA9C071B520FAA00BC322B /* CopyFiles */,
+				35DA9C0A1B52110400BC322B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = xlinksdklib;
+			productName = xlinksdklib;
+			productReference = 56A566791AA331380049883A /* libxlinksdklib.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		56A566711AA331380049883A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = xtmac02;
+				TargetAttributes = {
+					56A566781AA331380049883A = {
+						CreatedOnToolsVersion = 6.1;
+					};
+				};
+			};
+			buildConfigurationList = 56A566741AA331380049883A /* Build configuration list for PBXProject "xlinksdklib" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 56A566701AA331380049883A;
+			productRefGroup = 56A5667A1AA331380049883A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				56A566781AA331380049883A /* xlinksdklib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		56A566751AA331380049883A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				355E40F91BB3E16B000FC367 /* XSendBuffer.m in Sources */,
+				56BA46051ACA2EA9005A0A80 /* WebcommandsParse.m in Sources */,
+				56A5670E1AA331A30049883A /* SenderEngine.m in Sources */,
+				56A566F31AA331A30049883A /* PipeReturnPacket.m in Sources */,
+				56A566EC1AA331A30049883A /* ActivatePacket.m in Sources */,
+				E59DEF571CED68B400A3654A /* ScanReturnPacket.m in Sources */,
+				56E24BD11AAAA45800359EC3 /* CloudSetAuthPacket.m in Sources */,
+				56A36B5D1AA7E6BE00EDF9C6 /* PipeTwoReturnPacket.m in Sources */,
+				E57552801CEC53F9001930A7 /* SubKeyReturnHeader.m in Sources */,
+				56A567041AA331A30049883A /* LocalPipeReturnPacket.m in Sources */,
+				56A566F11AA331A30049883A /* LoginPacket.m in Sources */,
+				56CB05861AB96A7700153EA0 /* ConnectDeviceTask.m in Sources */,
+				56A567061AA331A30049883A /* ProbeHeaderPacket.m in Sources */,
+				56A566F51AA331A30049883A /* SetExtReturnPacket.m in Sources */,
+				564E7EE21AA9C88900DC060B /* SetPSWDPacket.m in Sources */,
+				E51B67741D2B49E2002E75C9 /* DataPointEntity.m in Sources */,
+				56A566F41AA331A30049883A /* SetExtPacket.m in Sources */,
+				56A567011AA331A30049883A /* FixHeader.m in Sources */,
+				E521CFA31D01311F00F1D768 /* HandShakeRetPacket.m in Sources */,
+				56E24BDA1AAACE6D00359EC3 /* CloudProbeReturnPacket.m in Sources */,
+				56E24BD41AAAA47400359EC3 /* CloudSetAuthReturnPacket.m in Sources */,
+				E521CFA01D012CA600F1D768 /* PingRetPacket.m in Sources */,
+				E521CFA81D01669500F1D768 /* SetLocalDataPointPacket.m in Sources */,
+				56A566EF1AA331A30049883A /* ConnectReturnPacket.m in Sources */,
+				56A566ED1AA331A30049883A /* ActivateReturnPacket.m in Sources */,
+				56A566FA1AA331A30049883A /* ExtPacketParse.m in Sources */,
+				E575527D1CEC53E9001930A7 /* SubKeyHeader.m in Sources */,
+				35E0BFEF1B03482C004E6AED /* XLinkCoreObject.m in Sources */,
+				35AEB7CD1B818E200018F81D /* SDKProperty.m in Sources */,
+				56A566FC1AA331A30049883A /* GCDAsyncUdpSocket.m in Sources */,
+				56A566FB1AA331A30049883A /* GCDAsyncSocket.m in Sources */,
+				56A566EE1AA331A30049883A /* ConnectPacket.m in Sources */,
+				564E7EF11AA9D99400DC060B /* CloudSetPWDReturnPacket.m in Sources */,
+				56A566FF1AA331A30049883A /* AppPipeDevicePacket.m in Sources */,
+				56A566FE1AA331A30049883A /* PacketParseEngine.m in Sources */,
+				56B93DD01AA3F2C000D7F9C4 /* XLinkExportObject.m in Sources */,
+				E521CFAF1D0166BF00F1D768 /* SetCloudDataPointReturnPacket.m in Sources */,
+				656C2ACF1C3CED8100D4F160 /* NotifyRetPacket.m in Sources */,
+				56DCCA3A1AB169220004F4BA /* XlinkMessage.m in Sources */,
+				65920A611C1E681E007510F7 /* SetACKReturnPacket.m in Sources */,
+				564E7EE51AA9C8AB00DC060B /* SetPSWDReturnPacket.m in Sources */,
+				56A566F01AA331A30049883A /* ExtFixHeader.m in Sources */,
+				564E7EEE1AA9D97700DC060B /* CloudSetPWDPacket.m in Sources */,
+				564E7EE81AA9D07500DC060B /* ShakeHandWithPSWDPacket.m in Sources */,
+				56A566EB1AA331A30049883A /* DeviceEntity.m in Sources */,
+				56A5670A1AA331A30049883A /* SetResponsePacket.m in Sources */,
+				56E24BCE1AAA989B00359EC3 /* SubscribeByAuthReturnPacket.m in Sources */,
+				E5814EE41CEC9F59001AD18F /* SubscribeByAuthPacket.m in Sources */,
+				654938491AF8BF73006F036F /* SyncCloudHeaderPacket.m in Sources */,
+				65E733791B8CA17C0099087F /* XLReachability.m in Sources */,
+				35A8D9021B7CA82000D3A1BC /* MessageTraceItem.m in Sources */,
+				E521CFA91D01669500F1D768 /* SetLocalDataPointReturnPacket.m in Sources */,
+				56A5670B1AA331A30049883A /* SyncRetHeaderPacket.m in Sources */,
+				E521CFAE1D0166BF00F1D768 /* SetCloudDataPointPacket.m in Sources */,
+				56A567051AA331A30049883A /* PingPacket.m in Sources */,
+				56A567091AA331A30049883A /* SetHeaderPacket.m in Sources */,
+				56A566F21AA331A30049883A /* PipePacket.m in Sources */,
+				353187C21B7C140800C6E566 /* Utils.m in Sources */,
+				56E24BD71AAACE3B00359EC3 /* CloudProbePacket.m in Sources */,
+				56A567071AA331A30049883A /* ScanHeader.m in Sources */,
+				56A567001AA331A30049883A /* DevicePipeAppPacket.m in Sources */,
+				355E40F61BB3E152000FC367 /* XSendBufferQueue.m in Sources */,
+				65920A5E1C1E6804007510F7 /* SetACKPacket.m in Sources */,
+				56A566E81AA331A30049883A /* AsyncUdpSocket.m in Sources */,
+				353EB1081B50CF55009C8EDE /* AutoReloginTask.m in Sources */,
+				56A36B5A1AA7E69900EDF9C6 /* PipeTwoPacket.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		56A5668B1AA331380049883A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "9167a6f8-06fd-4189-b9b2-6ae5298138ca";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		56A5668C1AA331380049883A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "9167a6f8-06fd-4189-b9b2-6ae5298138ca";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		56A5668E1AA331390049883A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386";
+			};
+			name = Debug;
+		};
+		56A5668F1AA331390049883A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		56A566741AA331380049883A /* Build configuration list for PBXProject "xlinksdklib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56A5668B1AA331380049883A /* Debug */,
+				56A5668C1AA331380049883A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		56A5668D1AA331390049883A /* Build configuration list for PBXNativeTarget "xlinksdklib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56A5668E1AA331390049883A /* Debug */,
+				56A5668F1AA331390049883A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 56A566711AA331380049883A /* Project object */;
+}

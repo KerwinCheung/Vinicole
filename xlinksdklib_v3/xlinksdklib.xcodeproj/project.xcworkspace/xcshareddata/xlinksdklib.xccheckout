@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>86F9EAF1-4E13-4090-A41E-D82DEF573D8B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>xlinksdklib</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>597a2776-3b1b-41f2-8859-17cfcde1e08b++5431</key>
+		<string>svn://42.121.13.204:10800/xlink/trunk/ios</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>xlinksdklib/xlinksdklib.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>597a2776-3b1b-41f2-8859-17cfcde1e08b++5431</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>597a2776-3b1b-41f2-8859-17cfcde1e08b++5431</key>
+		<string>svn://42.121.13.204:10800/xlink</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>svn://42.121.13.204:10800/xlink/trunk/ios/xlinksdklib/xlinksdklib.xcodeproj</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>597a2776-3b1b-41f2-8859-17cfcde1e08b++5431</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>597a2776-3b1b-41f2-8859-17cfcde1e08b++5431</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ios</string>
+		</dict>
+	</array>
+</dict>
+</plist>

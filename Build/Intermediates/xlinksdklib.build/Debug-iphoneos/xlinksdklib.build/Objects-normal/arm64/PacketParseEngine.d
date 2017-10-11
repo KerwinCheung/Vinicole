@@ -1,0 +1,24 @@
+dependencies: \
+  /Users/apple/Desktop/Dujiangji/xlinksdklib_v3/xlinksdklib/SDKlib/PacketParseEngine.m \
+  /Users/apple/Desktop/Dujiangji/xlinksdklib_v3/xlinksdklib/SDKlib/PacketParseEngine.h \
+  /Users/apple/Desktop/Dujiangji/xlinksdklib_v3/xlinksdklib/SDKlib/SDKHeader.h \
+  /Users/apple/Desktop/Dujiangji/xlinksdklib_v3/xlinksdklib/SDKlib/DeviceEntity.h \
+  /Users/apple/Desktop/Dujiangji/xlinksdklib_v3/xlinksdklib/SDKlib/XLinkCoreObject.h \
+  /Users/apple/Desktop/Dujiangji/xlinksdklib_v3/xlinksdklib/SDKlib/SenderEngine.h \
+  /Users/apple/Desktop/Dujiangji/xlinksdklib_v3/xlinksdklib/SDKlib/GCDAsyncUdpSocket.h \
+  /Users/apple/Desktop/Dujiangji/xlinksdklib_v3/xlinksdklib/SDKlib/GCDAsyncSocket.h \
+  /Users/apple/Desktop/Dujiangji/xlinksdklib_v3/xlinksdklib/SDKlib/MessageTraceItem.h \
+  /Users/apple/Desktop/Dujiangji/xlinksdklib_v3/xlinksdklib/SDKlib/ProtocolHeader/FixHeader.h \
+  /Users/apple/Desktop/Dujiangji/xlinksdklib_v3/xlinksdklib/SDKlib/XLinkExportObject.h \
+  /Users/apple/Desktop/Dujiangji/xlinksdklib_v3/xlinksdklib/SDKlib/ConnectDeviceTask.h \
+  /Users/apple/Desktop/Dujiangji/xlinksdklib_v3/xlinksdklib/SDKlib/ProtocolHeader/ScanReturnPacket.h \
+  /Users/apple/Desktop/Dujiangji/xlinksdklib_v3/xlinksdklib/SDKlib/ProtocolHeader/HandShakeRetPacket.h \
+  /Users/apple/Desktop/Dujiangji/xlinksdklib_v3/xlinksdklib/SDKlib/ProtocolHeader/SetResponsePacket.h \
+  /Users/apple/Desktop/Dujiangji/xlinksdklib_v3/xlinksdklib/SDKlib/ProtocolHeader/SyncRetHeaderPacket.h \
+  /Users/apple/Desktop/Dujiangji/xlinksdklib_v3/xlinksdklib/SDKlib/ProtocolHeader/SubKeyReturnHeader.h \
+  /Users/apple/Desktop/Dujiangji/xlinksdklib_v3/xlinksdklib/SDKlib/ProtocolHeader/LocalPipeReturnPacket.h \
+  /Users/apple/Desktop/Dujiangji/xlinksdklib_v3/xlinksdklib/SDKlib/ProtocolHeader/DevicePipeAppPacket.h \
+  /Users/apple/Desktop/Dujiangji/xlinksdklib_v3/xlinksdklib/SDKlib/ProtocolHeader/SetACKReturnPacket.h \
+  /Users/apple/Desktop/Dujiangji/xlinksdklib_v3/xlinksdklib/SDKlib/ProtocolHeader/PingRetPacket.h \
+  /Users/apple/Desktop/Dujiangji/xlinksdklib_v3/xlinksdklib/SDKlib/ProtocolHeader/SetPSWDReturnPacket.h \
+  /Users/apple/Desktop/Dujiangji/xlinksdklib_v3/xlinksdklib/SDKlib/ProtocolHeader/SetLocalDataPointReturnPacket.h

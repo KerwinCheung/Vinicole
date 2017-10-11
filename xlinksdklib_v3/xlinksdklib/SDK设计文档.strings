@@ -1,0 +1,361 @@
+/* 
+  SDK设计文档.strings
+  xlinksdklib
+
+  Created by xtmac02 on 15/4/13.
+  Copyright (c) 2015年 xtmac02. All rights reserved.
+*/
+
+
+                                            XLINK_SDK设计文档说明
+
+一.二进制协议的封装
+
+        协议封装原理说明，NSMutableData用来存储二进制协议buffer，_packetFlag用来说明二进制协议的位布局，提供返回包大小的函数，提供了构造函数。
+    例如：
+        @implementation FixHeader{
+    
+            NSMutableData *_packetData;  //包的byte buffer缓存
+            int _packetSize;             //包的大小
+    
+            struct {
+                
+                unsigned int _headInfo_offset:8;
+                unsigned int _headInfo_len:8;
+        
+                unsigned int _dataLen_offset:8;
+                unsigned int _dataLen_len:8;
+                
+            }packetFlag;                 //协议字节的布局，协议的布局可以通过二进制协议文档进行查看
+            
+        }
+
+
+        +(int)getPacketSize;   //类方法获得包的大小
+
+        //初始化，该函数的主要作用是在接收到网络返回的数据时截取指定长度的头并得到返回信息的协议头
+        -(id)initWithFixData:(NSData *)data;
+
+        //获得协议头的buffer
+        -(NSMutableData *)getPacketData;
+
+        //获得协议头的长度
+        -(NSInteger)getPacketSize;
+
+        /*
+         *note：还有获得其他协议部分的函数：（不同的包有不同的byte组成，就对应不同的get《－》set函数）
+         */
+
+
+    1.本地协议的封装
+
+        1.AppPipeDevicePacket协议包：app透传到设备的包，协议布局可以查看二进制文档。
+
+        2.DevicePipeAppPacket协议包：设备透传到app的包。
+
+        3.FixHeader协议包：固定协议头。
+
+        4.HandShakeHeader：（握手包）
+
+        5.HandShakeReturn：（握手返回包）
+
+        6.LocalPipeReturnPacket：（本地透传返回）
+
+        7.PingPacket：（ping包）
+
+        8.ProbeHeaderPacket：（探测包）
+
+        9.ScanHeader：（扫描协议头）
+
+        10.ScanReturnPacket：（扫描返回包）
+
+        11.ScanReturnTwoPacket：（扫描返回包，版本2）
+
+        12.SetHeaderPacket：（设置协议头）
+
+        13.SetResponsePacket：（设置返回包）
+
+        14.SyncHeaderPacket：（同步协议包）
+
+        15.TicketPacketHeader：（ticket包，被抛弃，为兼容前面而保留）
+
+        16.TicketReturnPacket：（ticket返回包）
+
+        17.SetPSWDPacket：（设置密码协议包）
+
+        18.SetPSWDReturnPacket：（设置密码协议返回包）
+
+        19.ShakeHandWithPSWDPacket：（通过密码握手的包，协议更新的版本）
+
+        20.ShakeHandByAuthReturnPacket：（适用密码握手返回）
+
+    2.云端协议的封装
+
+        1.ActivatePacket：激活协议包
+
+        2.ActivateReturnPacket：激活返回包
+
+        3.ConnectPacket：连接协议包
+
+        4.ConnectReturnPacket：连接返回包
+
+        5.ExtFixHeader：云端固定协议头
+
+        6.LoginPacket：云端登陆包
+
+        7.PipePacket：云端透传包
+
+        8.PipeReturnPacket：云端透传返回包
+
+        9.PipeTwoReturnPacket：云端透传返回版本2
+
+        10.SetExtPacket：云端设置
+
+        11.SetExtReturnPacket：云端设置返回
+
+        12.SubscriptionPacket：云端订阅包
+
+        13.SubscriptionReturnPacket：订阅返回包
+
+        14.SyncExtPacket：同步包
+
+        15.SyncExtReturnPacket：同步返回
+
+        16.CloudSetPWDPacket：需要密码才能设置操作的包
+
+        17.CloudSetPWDReturnPacket：设置返回
+
+        18.SubscribeByAuthPacket：通过密码订阅包
+
+        19.SubscribeByAuthReturnPacket：密码订阅返回
+
+        20.CloudProbePacket：云端探测
+
+        21.CloudProbeReturnPacket：云端探测返回
+
+
+二.数据解析类
+
+    1.本地协议解析（PacketParseEngine）单例
+        -(void)parseMachine:(NSData *)data forIP:(NSString *)ipStr;接受到的本地数据进行解析
+    2.云端协议解析（ExtPacketParse）单例
+        -(void)parserMachine:(NSData *)data;接收云端数据进行解析
+
+三.ConnectDeviceTask连接设备任务
+
+    ConnectDeviceTask设置为单例，主要是对连接的任务进行管理：（扫描设备并进行IP更新，尝试连接操作）
+
+    @interface ConnectTaskPacket : NSObject
+
+    @property (nonatomic,retain)DeviceEntity *device;  //一个任务包对应了一个设备，和设备访问密码
+
+    @property (nonatomic,retain)NSString *authKey;      //设备访问密码
+
+    -(instancetype)initWithDevice:(DeviceEntity *)device andAuthkey:(NSString *)authStr;   //初始化一个任务
+
+    @end
+
+    @interface ConnectDeviceTask : NSObject
+
+    +(ConnectDeviceTask *)sharedObject;//得到连接任务管理器
+
+    -(int)sendCheckIPWithDevice:(DeviceEntity *)device andAuthKey:(NSString *)auth; //检测设备IP是否改变，
+
+    -(ConnectTaskPacket *)getTaskByDevice:(DeviceEntity *)device;  //通过设备得到任务
+
+    -(void)removeTaskByDevice:(DeviceEntity *)device;   //通过设备实体删除连接任务
+
+    -(ConnectTaskPacket *)getTaskByMacAddress:(NSData *)macAddress;//通过Mac地址获得连接任务
+
+    -(void)removeTaskByMacAddress:(NSData *)macAddress;//通过Mac地址删除任务
+
+    @end
+
+
+四.XlinkMessage消息类
+
+    XlinkMessage，该类主要是用来跟踪消息的超时回调：
+
+        @interface XlinkMessage : NSObject
+        @property (nonatomic,assign)int messageID; //消息ID
+        @property (nonatomic,assign)int messageType;//消息类型
+        -(void)checkTimeOut;                        //开始超时检测
+        @end
+
+
+    例如：
+
+        unsigned short msgID = [self genMessageID];  //生成message ID
+
+        XlinkMessage *m = [[XlinkMessage alloc]init]; //建立一个message对象
+
+        m.messageID = msgID;      //设置messageID
+
+        m.messageType = MSG_TYPE_SEND_CLOUD_PROBE;  //设置消息类型
+
+        [[XLinkCoreObject sharedCoreObject] setMessageTraceObject:device andMessage:msgID];   //设置消息跟踪
+
+        [_messageQueue setObject:m forKeyedSubscript:[NSString stringWithFormat:@"%d",msgID]];   //添加到消息队列中
+
+        [[SenderEngine sharedEngine] sendCloudProbeWithDevice:device andMessageID:msgID andFlag:flag];  //通过发送引擎发送数据
+
+        [m checkTimeOut];    //检测超时，当指定的时间到达之后就会去检测发送的消息是否超时
+
+
+
+五.DeviceEntity设备实体
+
+
+    DeviceEntity：设备实体类，包含了设备的属性和设备的IP，有对应的文档说明,及协议说明。
+
+
+六.SenderEngine发送单例类
+
+    一个协议对应一个发送函数。
+
+    SenderEngine的作用是发送本地数据和云端数据，通过协议不同的协议需要的参数作为参数封装成对应的函数，发送本地的一般带有local，发送云端的一般带有cloud，函数对应不同的协议包。
+
+
+七.XLinkExportObject:外部使用的接口类
+
+    @protocol XlinkExportObjectDelegate <NSObject>
+
+    @optional
+
+    //onStart回调
+    -(void)onStart;
+
+    //扫描返回
+    -(void)onGotDeviceByScan:(DeviceEntity *)device;
+
+    //设置本地设备的访问授权码结果回调
+    -(void)onSetLocalDeviceAuthorizeCode:(DeviceEntity *)device withResult:(int)result withMessageID:(int)messageID;
+
+    //握手状态回调
+    -(void)onHandShakeWithDevice:(DeviceEntity *)device withResult:(int)result;
+
+    //发送本地pipe消息结果回调
+    -(void)onSendLocalPipeData:(DeviceEntity *)device withResult:(int)result withMessageID:(int)messageID;
+
+    //接收本地设备发送的pipe包
+    -(void)onRecvLocalPipeData:(DeviceEntity *)device withPayload:(NSData *)data;
+
+    //通知状态返回
+    -(void)onLogin:(int)result;
+
+    //订阅状态返回
+    -(void)onSubscription:(DeviceEntity *)device withResult:(int)result withMessageID:(int)messageID;
+
+    //云端设置授权结果回调
+    -(void)onSetDeviceAuthorizeCode:(DeviceEntity *)device withResult:(int)result withMessageID:(int)messageID;
+
+    //发送云端pipe数据结果
+    -(void)onSendPipeData:(DeviceEntity *)device withResult:(int)result withMessageID:(int)messageID;
+
+    //接收到云端设备发送回来的pipe结构
+    -(void)onRecvPipeData:(DeviceEntity *)device withPayload:(NSData *)payload;
+
+    //接收到云端设备发送的PIPE_SYNC(PIPE_2)
+    -(void)onRecvPipeSyncData:(DeviceEntity *)device withPayload:(NSData *)payload;
+
+    //网络状态回调
+    -(void)onNetStateChanged:(int)state;
+
+    //设备上下线状态回调
+    -(void)onDeviceStatusChanged:(DeviceEntity *)device andState:(int)state;
+
+    //云端探测返回回调
+    -(void)onDeviceProbe:(DeviceEntity *)device andCode:(int)code andMessageID:(int)messageID;
+
+
+    //连接设备回调
+    -(void)onConnectDevice:(DeviceEntity *)device andResult:(int)result andTaskID:(int)taskID ;
+
+    //透传状态回调
+    -(void)xlink:(XLinkExportObject *)xlin onPipeResponse:(DeviceEntity *)device andCode:(int)code;
+
+    //透传状态回调2
+    -(void)xlink:(XLinkExportObject *)xlin onPipeResponse:(DeviceEntity *)device andPayload:(NSData *)data;
+
+    @end
+
+    @interface XLinkExportObject : NSObject
+
+    +(XLinkExportObject *)sharedObject;
+
+    @property (nonatomic,retain)id<XlinkExportObjectDelegate> delegate;
+
+    //开始初始化操作 监听的app本地UDP端口 用于SDK监听WiFi设备数据回包
+    //note: 理论上该端口是随机得到当前可用的端口
+    //# 1
+    -(int)start;
+
+    //# 2
+    //通过产品ID扫描设备 设置扫描的回调代理
+    -(int)scanByDeviceProductID:(NSString *)productID;
+
+    //#3
+    //通过产品Mac地址扫描设备
+    -(int)scanDeviceByMac:(NSString *)macAddress;
+
+    //#4
+    //设置设备密码
+    -(int)setLocalDeviceAuthorizeCode:(DeviceEntity *)device andOldAuthCode:(NSString *)oldAuth andNewAuthCode:(NSString *)newAuth;
+
+    //#5
+    //与本地设备进行握手 没有握手的设备不能操作 需要提供authkey
+    -(int)handShakeWithDevice:(DeviceEntity *)device andAuthKey:(NSString *)authKey;
+
+    //#5.1
+    //直接与本地设备进行握手，兼容老协议
+    -(int)handShakeWithDevice:(DeviceEntity *)device;
+
+    //#6
+    //本地向设备pipe
+    -(int)sendLocalPipeData:(DeviceEntity *)device andPayload:(NSData *)payload;
+
+    //#7
+    //登陆外网
+    -(int)loginWithAppID:(int)appId andAuthStr:(NSString *)authStr;
+
+    //#8
+    //订阅设备，在系统中产生信任关系，只有订阅成功的设备才能在运行的云端的控制,在订阅的时候要检查deviceID是否为0，如果为0表示没有握手成功，需要去握手才能得到deviceID才能去订阅设备
+    -(int)subscribeDevice:(DeviceEntity *)device andAuthKey:(NSString *)authKey andFlag:(BOOL)flag;
+
+    //#9
+    //通过云端设置设备的访问授权码
+    -(int)setDeviceAuthorizeCode:(DeviceEntity *)device andOldAuthKey:(NSString *)oldAuth andNewAuthKey:(NSString *)newAuth;
+
+    //#10
+    //通过云端向设备发送pipe数据
+    -(int)sendPipeData:(DeviceEntity *)device andPayload:(NSData *)payload;
+
+    //#11
+    //向SDK中初始化设备节点
+    -(int)initDevice:(DeviceEntity *)device;
+
+    //#15
+    /////
+    -(int)probeDevice:(DeviceEntity *)device;
+
+    //#16
+    //连接设备1
+    -(int)connectDevice:(DeviceEntity *)device andAuthKey:(NSString *)authKey;
+
+    //清理操作
+    -(void)stop;
+
+    #pragma mark
+    #pragma mark  利达信保留接口
+    //订阅设备
+    -(void)subscriptionWithDevice:(DeviceEntity *)device andSubscription:(BOOL)sub;
+    //透传数据
+    -(void)pipeWithDevice:(DeviceEntity *)device andPayload:(NSData *)payload;
+
+    @end
+
+
+八.XLinkCoreObject:兼容层，很多的兼容工作可以在改类中暴露或者隐藏,或者对协议操作的组合串联，主要的作用是对XLinkExportObject的接口进行兼容对接等操作
+
+
+

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "absolute:/Users/xtmac02/Desktop/ios/demo01_v2/../xlinksdklib_ldx/xlinksdklib.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../../../demo01_v2/demo01.xcodeproj">
+   </FileRef>
+</Workspace>

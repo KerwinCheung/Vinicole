@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>12AFC76F-C61F-481C-808B-58BC56998024</string>
+	<key>IDESourceControlProjectName</key>
+	<string>20150303</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>597a2776-3b1b-41f2-8859-17cfcde1e08b++5431</key>
+		<string>svn://42.121.13.204:10800/xlink/trunk/ios</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>xlinksdklib/xlinksdklib/SDKlib/20150303.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>597a2776-3b1b-41f2-8859-17cfcde1e08b++5431</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>597a2776-3b1b-41f2-8859-17cfcde1e08b++5431</key>
+		<string>svn://42.121.13.204:10800/xlink</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>svn://42.121.13.204:10800/xlink/trunk/ios/xlinksdklib/xlinksdklib/SDKlib/20150303.xcworkspace</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>597a2776-3b1b-41f2-8859-17cfcde1e08b++5431</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>597a2776-3b1b-41f2-8859-17cfcde1e08b++5431</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ios</string>
+		</dict>
+	</array>
+</dict>
+</plist>

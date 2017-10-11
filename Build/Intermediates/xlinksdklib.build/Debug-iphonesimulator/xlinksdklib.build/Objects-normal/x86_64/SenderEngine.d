@@ -1,0 +1,33 @@
+dependencies: \
+  /Users/apple/Desktop/Warmer/xlinksdklib_v3/xlinksdklib/SDKlib/SenderEngine.m \
+  /Users/apple/Desktop/Warmer/xlinksdklib_v3/xlinksdklib/SDKlib/SenderEngine.h \
+  /Users/apple/Desktop/Warmer/xlinksdklib_v3/xlinksdklib/SDKlib/SDKHeader.h \
+  /Users/apple/Desktop/Warmer/xlinksdklib_v3/xlinksdklib/SDKlib/GCDAsyncUdpSocket.h \
+  /Users/apple/Desktop/Warmer/xlinksdklib_v3/xlinksdklib/SDKlib/GCDAsyncSocket.h \
+  /Users/apple/Desktop/Warmer/xlinksdklib_v3/xlinksdklib/SDKlib/DeviceEntity.h \
+  /Users/apple/Desktop/Warmer/xlinksdklib_v3/xlinksdklib/SDKlib/XLinkExportObject.h \
+  /Users/apple/Desktop/Warmer/xlinksdklib_v3/xlinksdklib/SDKlib/XLinkCoreObject.h \
+  /Users/apple/Desktop/Warmer/xlinksdklib_v3/xlinksdklib/SDKlib/ProtocolHeader/ScanHeader.h \
+  /Users/apple/Desktop/Warmer/xlinksdklib_v3/xlinksdklib/SDKlib/ProtocolHeader/ProbeHeaderPacket.h \
+  /Users/apple/Desktop/Warmer/xlinksdklib_v3/xlinksdklib/SDKlib/PacketParseEngine.h \
+  /Users/apple/Desktop/Warmer/xlinksdklib_v3/xlinksdklib/SDKlib/ProtocolHeader/SetHeaderPacket.h \
+  /Users/apple/Desktop/Warmer/xlinksdklib_v3/xlinksdklib/SDKlib/ProtocolHeader/SetACKPacket.h \
+  /Users/apple/Desktop/Warmer/xlinksdklib_v3/xlinksdklib/SDKlib/ExternalNetProtocol/LoginPacket.h \
+  /Users/apple/Desktop/Warmer/xlinksdklib_v3/xlinksdklib/SDKlib/ExternalNetProtocol/ExtHeader.h \
+  /Users/apple/Desktop/Warmer/xlinksdklib_v3/xlinksdklib/SDKlib/ExtPacketParse.h \
+  /Users/apple/Desktop/Warmer/xlinksdklib_v3/xlinksdklib/SDKlib/ProtocolHeader/FixHeader.h \
+  /Users/apple/Desktop/Warmer/xlinksdklib_v3/xlinksdklib/SDKlib/ProtocolHeader/SetPSWDPacket.h \
+  /Users/apple/Desktop/Warmer/xlinksdklib_v3/xlinksdklib/SDKlib/DataPointEntity.h \
+  /Users/apple/Desktop/Warmer/xlinksdklib_v3/xlinksdklib/SDKlib/ExternalNetProtocol/ExtFixHeader.h \
+  /Users/apple/Desktop/Warmer/xlinksdklib_v3/xlinksdklib/SDKlib/ProtocolHeader/PingPacket.h \
+  /Users/apple/Desktop/Warmer/xlinksdklib_v3/xlinksdklib/SDKlib/ExternalNetProtocol/PipePacket.h \
+  /Users/apple/Desktop/Warmer/xlinksdklib_v3/xlinksdklib/SDKlib/ProtocolHeader/AppPipeDevicePacket.h \
+  /Users/apple/Desktop/Warmer/xlinksdklib_v3/xlinksdklib/SDKlib/ProtocolHeader/ShakeHandWithPSWDPacket.h \
+  /Users/apple/Desktop/Warmer/xlinksdklib_v3/xlinksdklib/SDKlib/ExternalNetProtocol/SubscribeByAuthPacket.h \
+  /Users/apple/Desktop/Warmer/xlinksdklib_v3/xlinksdklib/SDKlib/ExternalNetProtocol/CloudSetAuthPacket.h \
+  /Users/apple/Desktop/Warmer/xlinksdklib_v3/xlinksdklib/SDKlib/ExternalNetProtocol/SetExtPacket.h \
+  /Users/apple/Desktop/Warmer/xlinksdklib_v3/xlinksdklib/SDKlib/ExternalNetProtocol/CloudProbePacket.h \
+  /Users/apple/Desktop/Warmer/xlinksdklib_v3/xlinksdklib/SDKProperty.h \
+  /Users/apple/Desktop/Warmer/xlinksdklib_v3/xlinksdklib/SDKlib/ProtocolHeader/SubKeyHeader.h \
+  /Users/apple/Desktop/Warmer/xlinksdklib_v3/xlinksdklib/SDKlib/ProtocolHeader/SetLocalDataPointPacket.h \
+  /Users/apple/Desktop/Warmer/xlinksdklib_v3/xlinksdklib/SDKlib/ExternalNetProtocol/SetCloudDataPointPacket.h

@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  Warmer
+
+  Created by apple on 2016/12/5.
+  Copyright © 2016年 apple. All rights reserved.
+*/
+
+"请输入正确的手机号码" = "Enter the correct phone number";
+"获取验证码" = "Get Code";
