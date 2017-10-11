@@ -8,8 +8,8 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
-#define FanPID @"160fa6b2e33603e9160fa6b2e336e801"
-#define FanKey @"c2adf734eaac108dcd5992cd6040d884"
+#define FanPID @"d4acdd9a0af34ea79a9179bf30c94c6a"
+#define FanKey @"17aafe0825c64e1f8e4467c9a7510578"
 
 #define SendPacketTime 0.1
 
@@ -21,9 +21,7 @@
 #define KeyWindow [UIApplication sharedApplication].keyWindow
 
 //颜色
-#define kMainColor 
-
-#define kGrayColor  [UIColor colorWithRed:213/255.0 green:213/255.0 blue:213/255.0 alpha:1]
+#define kMainColor
 //调试代码
 #ifdef DEBUG //-->调试宏 调试模式(Debug)下系统会自动定义，在上线、发布(release)模式 不会定义
 //定义一个变参宏  __VA_ARGS__可以接受变参宏的参数

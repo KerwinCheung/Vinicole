@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 //凝卓 企业id
-#define CorpId @"100fa2b2c85ab600"
+#define CorpId @"1007d2ada2c3e200"
 
 //正式
 #define Domain @"https://api2.xlink.cn"
