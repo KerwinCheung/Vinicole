@@ -130,11 +130,8 @@
     for (NSDictionary *recvDataDic in _recvDeviceDataArr) {
         NSMutableData *recvData = [recvDataDic objectForKey:@"data"];
 
-        while (recvData.length >= 13) {
+        while (recvData.length >= 10) {
             NSMutableArray <NSMutableData *>* dataPoint = [NSMutableArray arrayWithObjects:
-                                                           [NSMutableData dataWithLength:1],
-                                                           [NSMutableData dataWithLength:1],
-                                                           [NSMutableData dataWithLength:1],
                                                            [NSMutableData dataWithLength:1],
                                                            [NSMutableData dataWithLength:1],
                                                            [NSMutableData dataWithLength:1],
@@ -155,58 +152,58 @@
             [[NSNotificationCenter defaultCenter] postNotificationName:kQueryDeviceDataPoint object:@{@"result" : @(0), @"device" : [recvDataDic objectForKey:@"device"], @"dataPoint" : dataPoint}];
             
             return;
-            headIndex = 0;
-            UInt16 recvDataChar[recvData.length];
-            [recvData getBytes:recvDataChar length:recvData.length];
-            //找到包头
-            while (headIndex < recvData.length && (recvDataChar[headIndex] != DATAPACKETHEAD)) {
-                headIndex++;
-            }
-            
-            //如果找不到包头
-            if (headIndex >= recvData.length) {
-                recvData.length = 0;
-                return;
-            }
-            
-            //如果包头不是第一位，把包头前面的数据删掉
-            if (headIndex != 0) {
-                [recvData replaceBytesInRange:NSMakeRange(0, headIndex) withBytes:nil length:0];
-                [recvData getBytes:recvDataChar length:recvData.length];
-            }
-
-            //获取头
-            NSData *headData = [NSMutableData dataWithData:[recvData subdataWithRange:NSMakeRange(0, 1)]];
-            UInt16 head;
-            [headData getBytes:&head length:1];
-            
-            if (head == DATAPACKETHEAD) {
-                //状态数据
-                NSMutableArray <NSMutableData *>* dataPoint = [NSMutableArray arrayWithObjects:
-                                                               [NSMutableData dataWithLength:1],
-                                                               [NSMutableData dataWithLength:1],
-                                                               [NSMutableData dataWithLength:1],
-                                                               [NSMutableData dataWithLength:1],
-                                                               [NSMutableData dataWithLength:1],
-                                                               [NSMutableData dataWithLength:1],
-                                                               [NSMutableData dataWithLength:1],
-                                                               [NSMutableData dataWithLength:1],
-                                                               [NSMutableData dataWithLength:1],
-                                                               [NSMutableData dataWithLength:1],
-                                                               [NSMutableData dataWithLength:1],
-                                                               [NSMutableData dataWithLength:1],
-                                                               nil];
-                
-                [self getDataPoint:dataPoint RecvData:recvData];
-                
-                
-                [recvData replaceBytesInRange:NSMakeRange(0, recvData.length) withBytes:nil length:0];
-                
-                [[NSNotificationCenter defaultCenter] postNotificationName:kQueryDeviceDataPoint object:@{@"result" : @(0), @"device" : [recvDataDic objectForKey:@"device"], @"dataPoint" : dataPoint}];
-                
-            }else{
-                return;
-            }
+//            headIndex = 0;
+//            UInt16 recvDataChar[recvData.length];
+//            [recvData getBytes:recvDataChar length:recvData.length];
+//            //找到包头
+//            while (headIndex < recvData.length && (recvDataChar[headIndex] != DATAPACKETHEAD)) {
+//                headIndex++;
+//            }
+//
+//            //如果找不到包头
+//            if (headIndex >= recvData.length) {
+//                recvData.length = 0;
+//                return;
+//            }
+//
+//            //如果包头不是第一位，把包头前面的数据删掉
+//            if (headIndex != 0) {
+//                [recvData replaceBytesInRange:NSMakeRange(0, headIndex) withBytes:nil length:0];
+//                [recvData getBytes:recvDataChar length:recvData.length];
+//            }
+//
+//            //获取头
+//            NSData *headData = [NSMutableData dataWithData:[recvData subdataWithRange:NSMakeRange(0, 1)]];
+//            UInt16 head;
+//            [headData getBytes:&head length:1];
+//
+//            if (head == DATAPACKETHEAD) {
+//                //状态数据
+//                NSMutableArray <NSMutableData *>* dataPoint = [NSMutableArray arrayWithObjects:
+//                                                               [NSMutableData dataWithLength:1],
+//                                                               [NSMutableData dataWithLength:1],
+//                                                               [NSMutableData dataWithLength:1],
+//                                                               [NSMutableData dataWithLength:1],
+//                                                               [NSMutableData dataWithLength:1],
+//                                                               [NSMutableData dataWithLength:1],
+//                                                               [NSMutableData dataWithLength:1],
+//                                                               [NSMutableData dataWithLength:1],
+//                                                               [NSMutableData dataWithLength:1],
+//                                                               [NSMutableData dataWithLength:1],
+//                                                               [NSMutableData dataWithLength:1],
+//                                                               [NSMutableData dataWithLength:1],
+//                                                               nil];
+//
+//                [self getDataPoint:dataPoint RecvData:recvData];
+//
+//
+//                [recvData replaceBytesInRange:NSMakeRange(0, recvData.length) withBytes:nil length:0];
+//
+//                [[NSNotificationCenter defaultCenter] postNotificationName:kQueryDeviceDataPoint object:@{@"result" : @(0), @"device" : [recvDataDic objectForKey:@"device"], @"dataPoint" : dataPoint}];
+//
+//            }else{
+//                return;
+//            }
 
         }
 
@@ -217,73 +214,37 @@
 
 -(void)getDataPoint:(NSMutableArray *)dataPoint RecvData:(NSMutableData *)recvData{
     /*aaaa 0000 c8 00 
-     01 01 01 01 01 01 01 00 00 21 23 59
-     00 5555
+     01010000 0c503214 0000
      */
-    //1开关机（1byte）
+    //1  开关 1byte 0=关，1=开
     [dataPoint replaceObjectAtIndex:0 withObject:[NSMutableData dataWithData:[recvData subdataWithRange:NSMakeRange(0, 1)]]];
     
-    //2功能（1byte）
+    //2  灯开关 1byte 0=关，1=开
     [dataPoint replaceObjectAtIndex:1 withObject:[NSMutableData dataWithData:[recvData subdataWithRange:NSMakeRange(1, 1)]]];
-    //3运行的时钟（1byte）
+    
+    //3  玻璃门除雾开关状态 1byte 0=关，1=开
     [dataPoint replaceObjectAtIndex:2 withObject:[NSMutableData dataWithData:[recvData subdataWithRange:NSMakeRange(2, 1)]]];
-    //4运行的分钟（1byte）
+    
+    //4  温度单位 1byte 0=关，1=开
     [dataPoint replaceObjectAtIndex:3 withObject:[NSMutableData dataWithData:[recvData subdataWithRange:NSMakeRange(3, 1)]]];
-    //5运行的秒（1byte）
+    
+    //5  温度设定值 1byte 5~20 步长为1
     [dataPoint replaceObjectAtIndex:4 withObject:[NSMutableData dataWithData:[recvData subdataWithRange:NSMakeRange(4, 1)]]];
-    //6速度（1byte）
-    [dataPoint replaceObjectAtIndex:5 withObject:[NSMutableData dataWithData:[recvData subdataWithRange:NSMakeRange(6, 1)]]];
-    //7当前的温度（1byte）
-    [dataPoint replaceObjectAtIndex:6 withObject:[NSMutableData dataWithData:[recvData subdataWithRange:NSMakeRange(7, 1)]]];
-    //8备用（1byte）
-    [dataPoint replaceObjectAtIndex:7 withObject:[NSMutableData dataWithData:[recvData subdataWithRange:NSMakeRange(8, 1)]]];
-    //9故障（1byte）
-    [dataPoint replaceObjectAtIndex:8 withObject:[NSMutableData dataWithData:[recvData subdataWithRange:NSMakeRange(9, 1)]]];
-    /*10工作状态显示（1byte）
-     Bit4~bit7:0=无工作状态显示 1=完成 2=加热 3=搅拌 4=暂停
-     Bit0~bit3: 0=无工作状态显示 豆浆0x01 鲜玉米糊0x02 煲水0x03 绿豆米糊0x04 保温0x05 清洗0x06 DIY 0x07 其他：预留*/
-    [dataPoint replaceObjectAtIndex:9 withObject:[NSMutableData dataWithData:[recvData subdataWithRange:NSMakeRange(10, 1)]]];
     
-    //11预约剩余小时（1byte）
-    [dataPoint replaceObjectAtIndex:10 withObject:[NSMutableData dataWithData:[recvData subdataWithRange:NSMakeRange(11, 1)]]];
-    //12预约剩余分钟（1byte）
-    [dataPoint replaceObjectAtIndex:11 withObject:[NSMutableData dataWithData:[recvData subdataWithRange:NSMakeRange(12, 1)]]];
-    //13设置的保温温度
-    [dataPoint replaceObjectAtIndex:12 withObject:[NSMutableData dataWithData:[recvData subdataWithRange:NSMakeRange(5, 1)]]];
+    //6  湿度设定值 1byte 20~99 步长为1
+    [dataPoint replaceObjectAtIndex:5 withObject:[NSMutableData dataWithData:[recvData subdataWithRange:NSMakeRange(5, 1)]]];
     
-    /*
-    //1开关机（1byte）
-    [dataPoint replaceObjectAtIndex:0 withObject:[NSMutableData dataWithData:[recvData subdataWithRange:NSMakeRange(6, 1)]]];
- 
-    //2功能（1byte）
-    [dataPoint replaceObjectAtIndex:1 withObject:[NSMutableData dataWithData:[recvData subdataWithRange:NSMakeRange(7, 1)]]];
-    //3运行的时钟（1byte）
-    [dataPoint replaceObjectAtIndex:2 withObject:[NSMutableData dataWithData:[recvData subdataWithRange:NSMakeRange(8, 1)]]];
-    //4运行的分钟（1byte）
-    [dataPoint replaceObjectAtIndex:3 withObject:[NSMutableData dataWithData:[recvData subdataWithRange:NSMakeRange(9, 1)]]];
-    //5运行的秒（1byte）
-    [dataPoint replaceObjectAtIndex:4 withObject:[NSMutableData dataWithData:[recvData subdataWithRange:NSMakeRange(10, 1)]]];
-    //6速度（1byte）
-    [dataPoint replaceObjectAtIndex:5 withObject:[NSMutableData dataWithData:[recvData subdataWithRange:NSMakeRange(11, 1)]]];
-    //7当前的温度（1byte）
-    [dataPoint replaceObjectAtIndex:6 withObject:[NSMutableData dataWithData:[recvData subdataWithRange:NSMakeRange(12, 1)]]];
-    //8备用（1byte）
-    [dataPoint replaceObjectAtIndex:7 withObject:[NSMutableData dataWithData:[recvData subdataWithRange:NSMakeRange(13, 1)]]];
-    //9故障（1byte）
-    [dataPoint replaceObjectAtIndex:8 withObject:[NSMutableData dataWithData:[recvData subdataWithRange:NSMakeRange(14, 1)]]];
-     */
-    /*10工作状态显示（1byte） 
-    Bit4~bit7:0=无工作状态显示 1=完成 2=加热 3=搅拌 4=暂停
-    Bit0~bit3: 0=无工作状态显示 豆浆0x01 鲜玉米糊0x02 煲水0x03 绿豆米糊0x04 保温0x05 清洗0x06 DIY 0x07 其他：预留
-     */
-    /*
-    [dataPoint replaceObjectAtIndex:9 withObject:[NSMutableData dataWithData:[recvData subdataWithRange:NSMakeRange(15, 1)]]];
-
-    //11预约剩余小时（1byte）
-    [dataPoint replaceObjectAtIndex:10 withObject:[NSMutableData dataWithData:[recvData subdataWithRange:NSMakeRange(16, 1)]]];
-    //12预约剩余分钟（1byte）
-    [dataPoint replaceObjectAtIndex:11 withObject:[NSMutableData dataWithData:[recvData subdataWithRange:NSMakeRange(17, 1)]]];
-     */
+    //7  实际温度值 1byte 0~129 步长为1(实际温度为值-30)
+    [dataPoint replaceObjectAtIndex:6 withObject:[NSMutableData dataWithData:[recvData subdataWithRange:NSMakeRange(6, 1)]]];
+    
+    //8  实际湿度 1byte 0~99 步长为1
+    [dataPoint replaceObjectAtIndex:7 withObject:[NSMutableData dataWithData:[recvData subdataWithRange:NSMakeRange(7, 1)]]];
+    
+    //9  工作状态 1byte 0=制冷 1=恒温 2=制热
+    [dataPoint replaceObjectAtIndex:8 withObject:[NSMutableData dataWithData:[recvData subdataWithRange:NSMakeRange(8, 1)]]];
+    
+    //10 故障 1byte 0=正常 1=E1 2=E2 。。。。 10=E10
+    [dataPoint replaceObjectAtIndex:9 withObject:[NSMutableData dataWithData:[recvData subdataWithRange:NSMakeRange(9, 1)]]];
 }
 
 -(void)sendPacket:(PacketModel *)packetModel withDevice:(DeviceEntity *)deviceEntity{

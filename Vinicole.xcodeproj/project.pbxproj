@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		180DAB671DF7085F00926317 /* libxlinksdklib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 180DAB661DF7082500926317 /* libxlinksdklib.a */; };
 		180DAB771DF709A200926317 /* libsmartlinklib_7x.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18839E461DDAFCCD00B87B4D /* libsmartlinklib_7x.a */; };
+		180F2D2C1F93C7E2008ABCEC /* DS-DIGIT.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 180F2D2A1F93BFFD008ABCEC /* DS-DIGIT.TTF */; };
 		182359741E24DBB800C25691 /* ForgetPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182359731E24DBB800C25691 /* ForgetPwdViewController.m */; };
 		182BE9571E325F540049E57B /* CorporateCultureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182BE9561E325F540049E57B /* CorporateCultureViewController.m */; };
 		182BE95A1E3261990049E57B /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182BE9591E3261990049E57B /* HelpViewController.m */; };
@@ -64,6 +65,7 @@
 
 /* Begin PBXFileReference section */
 		180DAB611DF7082400926317 /* xlinksdklib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = xlinksdklib.xcodeproj; path = xlinksdklib_v3/xlinksdklib.xcodeproj; sourceTree = "<group>"; };
+		180F2D2A1F93BFFD008ABCEC /* DS-DIGIT.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DS-DIGIT.TTF"; sourceTree = "<group>"; };
 		182359721E24DBB800C25691 /* ForgetPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPwdViewController.h; sourceTree = "<group>"; };
 		182359731E24DBB800C25691 /* ForgetPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPwdViewController.m; sourceTree = "<group>"; };
 		182BE9551E325F540049E57B /* CorporateCultureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CorporateCultureViewController.h; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 		18839E121DDAFA4C00B87B4D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				180F2D2A1F93BFFD008ABCEC /* DS-DIGIT.TTF */,
 				18839E131DDAFA4C00B87B4D /* main.m */,
 			);
 			name = "Supporting Files";
@@ -535,6 +538,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				180F2D2C1F93C7E2008ABCEC /* DS-DIGIT.TTF in Resources */,
 				18839EC01DDAFD9E00B87B4D /* Index.storyboard in Resources */,
 				188E44B41DE1B6D000368F7B /* Login.storyboard in Resources */,
 				1856ABFF1DF68980005EFF8A /* DeviceControl.storyboard in Resources */,
@@ -713,7 +717,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Warmer/PrefixHeader.pch;
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/xlinksdklib_v3/xlinksdklib/SDKlib";
-				INFOPLIST_FILE = Vinicole/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Warmer/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/Warmer/SDK/HFSmartLink";
@@ -736,7 +740,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Warmer/PrefixHeader.pch;
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/xlinksdklib_v3/xlinksdklib/SDKlib";
-				INFOPLIST_FILE = Vinicole/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Warmer/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/Warmer/SDK/HFSmartLink";

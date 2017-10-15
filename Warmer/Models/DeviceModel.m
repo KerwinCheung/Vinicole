@@ -30,7 +30,7 @@
 
     deviceModel.isExpDevice = @(1);
     deviceModel.device = [[DeviceEntity alloc]init];
-    deviceModel.name = @"Vinicole-演示机";
+    deviceModel.name = @"红酒柜-演示机";
     [deviceModel setDefaultDataPoint];
     return deviceModel;
     
@@ -67,25 +67,17 @@
 }
 
 -(void)initDataPoint{
-    
-    /*
-     1开关机（1byte）
-     2功能（1byte）
-     3运行的时钟（1byte）
-     4运行的分钟（1byte）
-     5运行的秒（1byte）
-     6速度（1byte）
-     7当前的温度（1byte）
-     8备用（1byte）
-     9故障（1byte）
-     10工作状态显示（1byte）
-     11预约剩余小时（1byte）
-     12预约剩余分钟（1byte）
-     13设置的保温温度 (1byte)
-     */
-    
+    //     开关 1byte 0=关，1=开
+    //     灯开关 1byte 0=关，1=开
+    //     玻璃门除雾开关状态 1byte 0=关，1=开
+    //     温度单位 1byte 0=关，1=开
+    //     温度设定值 1byte 5~20 步长为1
+    //     湿度设定值 1byte 20~99 步长为1
+    //     实际温度值 1byte 0~129 步长为1(实际温度为值-30)
+    //     实际湿度 1byte 0~99 步长为1
+    //     工作状态 1byte 0=制冷 1=恒温 2=制热
+    //     故障 1byte 0=正常 1=E1 2=E2 。。。。 10=E10
     UInt8 value = 0x00;
-    
     _dataPoint = [NSMutableArray arrayWithObjects:
                   [NSMutableData dataWithBytes:&value length:1],
                   [NSMutableData dataWithBytes:&value length:1],
@@ -97,34 +89,22 @@
                   [NSMutableData dataWithBytes:&value length:1],
                   [NSMutableData dataWithBytes:&value length:1],
                   [NSMutableData dataWithBytes:&value length:1],
-                  [NSMutableData dataWithBytes:&value length:1],
-                  [NSMutableData dataWithBytes:&value length:1],
-                  [NSMutableData dataWithBytes:&value length:1],
                   nil];
-   
-    
-    
 }
 
 -(void)setDefaultDataPoint{
-    /*
-     1开关机（1byte）
-     2功能（1byte）
-     3运行的时钟（1byte）
-     4运行的分钟（1byte）
-     5运行的秒（1byte）
-     6速度（1byte）
-     7当前的温度（1byte）
-     8备用（1byte）
-     9故障（1byte）
-     10工作状态显示（1byte）
-     11预约剩余小时（1byte）
-     12预约剩余分钟（1byte）
-     */
-
+    //     开关 1byte 0=关，1=开
+    //     灯开关 1byte 0=关，1=开
+    //     玻璃门除雾开关状态 1byte 0=关，1=开
+    //     温度单位 1byte 0=关，1=开
+    //     温度设定值 1byte 5~20 步长为1
+    //     湿度设定值 1byte 20~99 步长为1
+    //     实际温度值 1byte 0~129 步长为1(实际温度为值-30)
+    //     实际湿度 1byte 0~99 步长为1
+    //     工作状态 1byte 0=制冷 1=恒温 2=制热
+    //     故障 1byte 0=正常 1=E1 2=E2 。。。。 10=E10
     UInt8 setTemp = 0x01;
     [_dataPoint[0] replaceBytesInRange:NSMakeRange(0, 1) withBytes:&setTemp length:1];
-    
 }
 
 -(NSDictionary *)getDictionary{
@@ -154,19 +134,6 @@
     
     return dic;
 }
-
-//-(NSString *)name{
-//    if (!_name.length) {
-//        if (_isExpDevice.intValue == 1) {
-//            _name = @"商用豆浆机-演示机";
-//        }else{
-//            NSString *macStr = [_device getMacAddressSimple];
-//            NSString *nameStr = [macStr substringWithRange:NSMakeRange(macStr.length-4, 4)];
-//            _name =[NSString stringWithFormat:@"商用豆浆机-%@",nameStr];
-//        }
-//    }
-//    return _name;
-//}
 
 -(NSNumber *)getValidTimedTaskID{
     NSUInteger timedTaskID = 0;

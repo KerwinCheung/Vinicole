@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yp4-y1-oz8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yp4-y1-oz8">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -140,10 +140,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="111" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add_btn" translatesAutoresizingMaskIntoConstraints="NO" id="EsN-D2-RrF">
-                                                    <rect key="frame" x="19" y="11.666666666666664" width="22" height="22"/>
+                                                    <rect key="frame" x="-21" y="11.666666666666664" width="22" height="22"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="112" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="添加设备" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPc-ne-MAk">
-                                                    <rect key="frame" x="61" y="14" width="58" height="17"/>
+                                                    <rect key="frame" x="21" y="14" width="58" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -255,9 +255,9 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ldr-WW-x6Q">
                                                 <rect key="frame" x="8" y="8" width="397" height="324.66666666666663"/>
-                                                <mutableString key="text">    中山市惠尔普斯电器有限公司是一家专业生产家用电器和商用电器的现代化高科技企业，公司专注于家用豆浆机、商用豆浆机，电热水壶，绞肉机，破壁料理机，水果冰淇淋机等产品的研发和生产，深受国内外消费者的喜爱。 惠尔普斯公司自成立以来，秉持技术领先、顾客至上，质量第一的发展目标，凭借卓越的科技及前卫的设计理念，依靠领先的研发能力和精湛的制造技术，不断研发和生产出健康、安全、时尚、智能为一体的家用、商用电器产品，自投放市场以来，深受广大顾客好评。
+                                                <string key="text">    中山市惠尔普斯电器有限公司是一家专业生产家用电器和商用电器的现代化高科技企业，公司专注于家用豆浆机、商用豆浆机，电热水壶，绞肉机，破壁料理机，水果冰淇淋机等产品的研发和生产，深受国内外消费者的喜爱。 惠尔普斯公司自成立以来，秉持技术领先、顾客至上，质量第一的发展目标，凭借卓越的科技及前卫的设计理念，依靠领先的研发能力和精湛的制造技术，不断研发和生产出健康、安全、时尚、智能为一体的家用、商用电器产品，自投放市场以来，深受广大顾客好评。
     惠尔普斯电器2013年度被评为质量合格用户满意企业，2014年荣获商用豆浆机自主创新金奖，2015年度成为慧聪网年度优质供应商，并与同年入驻亚洲最大的家电城“慧聪家电城”发力O2O项目。我们坚信“好品质是企业长久发展之根本”!
-</mutableString>
+</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -793,13 +793,13 @@
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginImg" translatesAutoresizingMaskIntoConstraints="NO" id="9wH-m9-DQy">
-                                <rect key="frame" x="123.66666666666669" y="104" width="167" height="167"/>
+                                <rect key="frame" x="165.66666666666666" y="104" width="83" height="83"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zJ7-D1-imq">
-                                <rect key="frame" x="0.0" y="311" width="414" height="40"/>
+                                <rect key="frame" x="0.0" y="227" width="414" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当前版本" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvd-QS-All">
-                                        <rect key="frame" x="20" y="9.6666666666666856" width="69.666666666666671" height="21"/>
+                                        <rect key="frame" x="20" y="9.6666666666666572" width="69.666666666666671" height="21.000000000000028"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -821,7 +821,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vje-kg-eXw">
-                                <rect key="frame" x="0.0" y="371" width="414" height="124"/>
+                                <rect key="frame" x="0.0" y="287" width="414" height="124"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r0k-MT-NNB" customClass="UIControl">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
@@ -875,7 +875,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="http://www.sampux.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WcO-F1-eyV">
-                                                <rect key="frame" x="207" y="10" width="187" height="21"/>
+                                                <rect key="frame" x="208.33333333333337" y="10" width="185.66666666666663" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -940,7 +940,7 @@
                                 </constraints>
                             </view>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2014-2016 LinkJob. All Rights Reserved" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPx-PU-N2g">
-                                <rect key="frame" x="20" y="515" width="374" height="12"/>
+                                <rect key="frame" x="20" y="431" width="374" height="12"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -978,7 +978,6 @@
                 <navigationController storyboardIdentifier="BaseNavigationController" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="yp4-y1-oz8" customClass="BaseNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="cbz-Gh-U19">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.73001492020000003" green="0.41060440850000002" blue="0.2005695059" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
@@ -996,7 +995,7 @@
         <image name="Add_back" width="12" height="28"/>
         <image name="add_btn" width="22" height="22"/>
         <image name="cate_heater" width="67" height="67"/>
-        <image name="loginImg" width="167" height="167"/>
+        <image name="loginImg" width="83" height="83"/>
         <image name="menu_+" width="22" height="22"/>
         <image name="menu_btn" width="24" height="20"/>
         <image name="wenhua" width="375" height="214"/>

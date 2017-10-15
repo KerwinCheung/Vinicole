@@ -246,7 +246,7 @@
     
     NSString *macStr = [device getMacAddressSimple];
     NSString *nameStr = [macStr substringWithRange:NSMakeRange(macStr.length-4, 4)];
-    deviceModel.name =[NSString stringWithFormat:@"商用豆浆机-%@",nameStr];
+    deviceModel.name =[NSString stringWithFormat:@"红酒柜-%@",nameStr];
     
     DeviceModel *willDelDeviceModel = [DATASOURCE getWillDelDeviceModelWithMac:[deviceModel.device getMacAddressSimple]];
     if (willDelDeviceModel) {

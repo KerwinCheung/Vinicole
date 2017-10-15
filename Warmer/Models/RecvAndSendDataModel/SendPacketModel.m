@@ -104,6 +104,22 @@
     
 }
 
++(void)controlDevice:(DeviceEntity *)device withSendData:(NSData *)sendData{
+    PacketModel *packetModel = [[PacketModel alloc] init];
+    packetModel.command = 0xc5;
+    
+    NSMutableData *data = [NSMutableData data];
+    
+    unsigned char command = 0x01;
+    [data appendBytes:&command length:1];
+    
+    [data appendBytes:sendData.byte length:sendData.length];
+    
+    packetModel.data = [NSData dataWithData:data];
+    
+    [[RecvAndSendEngine shareEngine] sendPacket:packetModel withDevice:device];
+}
+
 +(BOOL)isSend{
     static NSTimeInterval time = 0;
     NSTimeInterval curTime = [[NSDate date] timeIntervalSince1970];
