@@ -16,6 +16,10 @@
 #import "XLinkExportObject.h"
 
 @interface DeviceControlViewController ()<UIGestureRecognizerDelegate>
+{
+    NSMutableArray *hourArr;//温度
+    NSMutableArray *minuteArr;//湿度
+}
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
@@ -50,6 +54,14 @@
 @property (weak, nonatomic) IBOutlet UIButton *defoggingBtn;
 @property (weak, nonatomic) IBOutlet UIButton *TempSwtichBtn;
 
+//Picker
+@property (weak, nonatomic) IBOutlet UIView *PickerView;
+@property (weak, nonatomic) IBOutlet UIPickerView *hourPicker;//温度picker
+@property (weak, nonatomic) IBOutlet UIPickerView *minutePicker;//湿度picker
+@property (weak, nonatomic) IBOutlet UILabel *unitLabel;
+
+@property (nonatomic, assign) int hourNum;//温度
+@property (nonatomic, assign) int minuteNum;//湿度
 @end
 
 @implementation DeviceControlViewController
@@ -84,13 +96,17 @@
     //设备连接状态改变
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onDeviceStateChange:) name:kOnConnectDevice object:nil];
     
+    self.hourNum = 0;
+    self.minuteNum = 0;
+    [self setPickerDataArray];
+    
     [self setUpConstant];
-//    [self setUI];
-
+    //    [self setUI];
+    
 }
 
 -(void)setUpConstant{
-
+    
 }
 
 -(void)goSetTimeVC:(NSInteger)btnTag{
@@ -134,7 +150,7 @@
                 self.titleLabel.text = self.deviceModel.name;
                 
                 [[NSNotificationCenter defaultCenter] postNotificationName:kUpdateDeviceList object:nil];
-
+                
                 
                 
                 
@@ -234,7 +250,7 @@
     }else{
         self.shadowView.hidden = self.menuView.hidden;
     }
-
+    
 }
 
 #pragma mark - other
@@ -274,9 +290,9 @@
         }
         
     }else if (device.isConnecting){
-     
+        
     }else{
-       
+        
         if (self.linkAlc != nil) {
             [self.linkAlc dismissViewControllerAnimated:YES completion:^{
                 UIAlertController *faultAC = [UIAlertController alertControllerWithTitle:nil message:@"设备连接失败" preferredStyle:UIAlertControllerStyleAlert];
@@ -291,7 +307,7 @@
             }];
             
             self.linkAlc = nil;
-
+            
         }
         
     }
@@ -299,7 +315,7 @@
 #pragma mark - setUI
 -(void)setUI{
     self.titleLabel.text = self.deviceModel.name;
-
+    
     if (self.deviceModel == nil) {
         return;
     }
@@ -340,8 +356,8 @@
     UInt8 settingHumidityValue = ((const UInt8 *)_deviceModel.dataPoint[5].bytes)[0];
     _settingHumidityLabel.text = [NSString stringWithFormat:@"%d",settingHumidityValue];
     //7  实际温度值 1byte 0~129 步长为1(实际温度为值-30)
-    UInt8 tempValue = ((const UInt8 *)_deviceModel.dataPoint[6].bytes)[0];
-    _currentTempLabel.text = [NSString stringWithFormat:@"%d",tempValue-30];
+    UInt8 tempValue = ((const UInt8 *)_deviceModel.dataPoint[6].bytes)[0] - 30;
+    _currentTempLabel.text = [NSString stringWithFormat:@"%d",tempValue];
     //8  实际湿度 1byte 0~99 步长为1
     UInt8 humidityValue = ((const UInt8 *)_deviceModel.dataPoint[7].bytes)[0];
     _currentHumidityLabel.text = [NSString stringWithFormat:@"%d",humidityValue];
@@ -379,7 +395,7 @@
         
     }else{
     }
-
+    
     
 }
 
@@ -450,27 +466,35 @@
 - (IBAction)ControlBtnAction:(UIButton *)sender{
     switch (sender.tag) {
         case 1:
-            {
-                UInt8 power = !((const UInt8 *)_deviceModel.dataPoint[0].bytes)[0];
-                [self.deviceModel.dataPoint[0] replaceBytesInRange:NSMakeRange(0,1) withBytes:&power length:1];
-                
-                [SendPacketModel controlDevice:_deviceModel.device withSendData:self.deviceModel.dataPoint[0].bytes];
-                [self setPowerValue];
-            }
+        {
+            UInt8 power = !((const UInt8 *)_deviceModel.dataPoint[0].bytes)[0];
+            [self.deviceModel.dataPoint[0] replaceBytesInRange:NSMakeRange(0,1) withBytes:&power length:1];
+            [SendPacketModel controlDevice:_deviceModel.device withSendData:_deviceModel.dataPoint[0] Command:0x01];
+            [self setPowerValue];
+        }
             break;
         case 2:
         {
-            
+            UInt8 light = !((const UInt8 *)_deviceModel.dataPoint[1].bytes)[0];
+            [self.deviceModel.dataPoint[1] replaceBytesInRange:NSMakeRange(0,1) withBytes:&light length:1];
+            [SendPacketModel controlDevice:_deviceModel.device withSendData:_deviceModel.dataPoint[1] Command:0x02];
+            [self setPowerValue];
         }
             break;
         case 3:
         {
-            
+            UInt8 defog = !((const UInt8 *)_deviceModel.dataPoint[2].bytes)[0];
+            [self.deviceModel.dataPoint[2] replaceBytesInRange:NSMakeRange(0,1) withBytes:&defog length:1];
+            [SendPacketModel controlDevice:_deviceModel.device withSendData:_deviceModel.dataPoint[2] Command:0x03];
+            [self setPowerValue];
         }
             break;
         case 4:
         {
-            
+            UInt8 tempSwitch = !((const UInt8 *)_deviceModel.dataPoint[3].bytes)[0];
+            [self.deviceModel.dataPoint[3] replaceBytesInRange:NSMakeRange(0,1) withBytes:&tempSwitch length:1];
+            [SendPacketModel controlDevice:_deviceModel.device withSendData:_deviceModel.dataPoint[3] Command:0x04];
+            [self setPowerValue];
         }
             break;
             
@@ -483,21 +507,153 @@
 
 #pragma mark - SettingBtnAction
 - (IBAction)settingBtnAction:(UIButton *)sender {
-    NSLog(@"%zd",sender.tag);
+    _PickerView.hidden = NO;
     switch (sender.tag) {
         case 0:
-            {
-                
+        {
+            //设置温度
+            if (self.TempSwtichBtn.selected) {
+                _unitLabel.text = @"℃";
+            }else{
+                _unitLabel.text = @"℉";
             }
+            _minutePicker.hidden = YES;
+            _hourPicker.hidden = NO;
+        }
             break;
         case 1:
         {
+            //设置湿度
+            _unitLabel.text = @"%RH";
+            _minutePicker.hidden = NO;
+            _hourPicker.hidden = YES;
             
         }
             break;
         default:
             break;
     }
+}
+
+#pragma mark  - pickview delegate
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 1;
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    if (pickerView == self.hourPicker) {
+        return [hourArr count]*10;
+    }else{
+        return [minuteArr count]*10;
+    }
+    
+}
+
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    if (pickerView == self.hourPicker) {
+        NSNumber *hourNum = [hourArr objectAtIndex:(row%[hourArr count])];
+        int hour = hourNum.intValue;
+        NSString *title = [NSString stringWithFormat:@"%.2d",hour];
+        return title;
+    }else{
+        NSNumber *minuteNum = [minuteArr objectAtIndex:(row%[minuteArr count])];
+        int minute = minuteNum.intValue;
+        NSString *title = [NSString stringWithFormat:@"%.2d",minute];
+        return title;
+    }
+    
+}
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+{
+    
+    NSUInteger max = 0;
+    NSUInteger base10 = 0;
+    if (pickerView == self.hourPicker) {
+        
+        if(component == 0)
+        {
+            max = [hourArr count]*10;
+            base10 = (max/2)-(max/2)%[hourArr count];
+            [pickerView selectRow:[pickerView selectedRowInComponent:component]%[hourArr count]+base10 inComponent:component animated:false];
+            
+            NSNumber *hour = hourArr[row%hourArr.count];
+            self.hourNum = hour.intValue;
+            
+        }
+        
+    }else{
+        
+        if(component == 0)
+        {
+            max = [minuteArr count]*10;
+            base10 = (max/2)-(max/2)%[minuteArr count];
+            [pickerView selectRow:[pickerView selectedRowInComponent:component]%[minuteArr count]+base10 inComponent:component animated:false];
+            
+            NSNumber *minute = minuteArr[row%minuteArr.count];
+            self.minuteNum = minute.intValue;
+        }
+        
+    }
+    
+}
+
+- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view {
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(12.0f, 0.0f, [pickerView rowSizeForComponent:component].width-12, [pickerView rowSizeForComponent:component].height)];
+    label.backgroundColor = [UIColor clearColor];
+    label.textAlignment = NSTextAlignmentCenter;
+    NSString *title;
+    if (pickerView == self.hourPicker) {
+        NSNumber *hourNum = [hourArr objectAtIndex:(row%[hourArr count])];
+        int hour = hourNum.intValue;
+        title = [NSString stringWithFormat:@"%d",hour];
+        
+    }else{
+        NSNumber *minuteNum = [minuteArr objectAtIndex:(row%[minuteArr count])];
+        int minute = minuteNum.intValue;
+        title = [NSString stringWithFormat:@"%d",minute];
+        
+    }
+    label.text = title;
+    
+    return label;
+}
+
+-(void)setPickerDataArray{
+    hourArr = [NSMutableArray array];
+    for (int i = 5; i<20; i++) {
+        [hourArr addObject:@(i)];
+    }
+    [self.hourPicker selectRow:hourArr.count inComponent:0 animated:YES];
+    
+    minuteArr = [NSMutableArray array];
+    for (int i = 20; i< 99; i++) {
+        [minuteArr addObject:@(i)];
+    }
+    [self.minutePicker selectRow:minuteArr.count inComponent:0 animated:YES];
+}
+
+- (IBAction)PickerViewOKBtnAction:(id)sender {
+    if ([_unitLabel.text isEqualToString:@"%RH"]) {
+        //发送设置湿度
+        UInt8 humidityValue = _minuteNum;
+        [self.deviceModel.dataPoint[5] replaceBytesInRange:NSMakeRange(0,1) withBytes:&humidityValue length:1];
+        [SendPacketModel controlDevice:_deviceModel.device withSendData:_deviceModel.dataPoint[5] Command:0x06];
+    }else{
+        //发送设置温度
+        UInt8 tempValue = _hourNum;
+        [self.deviceModel.dataPoint[4] replaceBytesInRange:NSMakeRange(0,1) withBytes:&tempValue length:1];
+        [SendPacketModel controlDevice:_deviceModel.device withSendData:_deviceModel.dataPoint[4] Command:0x05];
+    }
+     _PickerView.hidden = YES;
+}
+
+- (IBAction)PickerViewCancleBtnAction:(id)sender {
+    _PickerView.hidden = YES;
 }
 
 -(void)viewDidDisappear:(BOOL)animated{

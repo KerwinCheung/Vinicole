@@ -104,16 +104,15 @@
     
 }
 
-+(void)controlDevice:(DeviceEntity *)device withSendData:(NSData *)sendData{
++(void)controlDevice:(DeviceEntity *)device withSendData:(NSData *)sendData Command:(unsigned char)command{
     PacketModel *packetModel = [[PacketModel alloc] init];
     packetModel.command = 0xc5;
     
     NSMutableData *data = [NSMutableData data];
-    
-    unsigned char command = 0x01;
+
     [data appendBytes:&command length:1];
     
-    [data appendBytes:sendData.byte length:sendData.length];
+    [data appendBytes:sendData.bytes length:sendData.length];
     
     packetModel.data = [NSData dataWithData:data];
     

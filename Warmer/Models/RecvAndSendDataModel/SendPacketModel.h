@@ -30,7 +30,7 @@ typedef enum : unsigned char {
 
 +(void)clocsDevice:(DeviceEntity *)device withSendDataArray:(NSMutableArray *)sendDataArray;
 
-+(void)controlDevice:(DeviceEntity *)device withSendData:(NSData *)sendData;
++(void)controlDevice:(DeviceEntity *)device withSendData:(NSData *)sendData Command:(unsigned char)command;
 
 +(BOOL)isSend;
 
