@@ -310,19 +310,19 @@
                                         <rect key="frame" x="0.0" y="45" width="320" height="85.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOO-dl-fM5">
-                                                <rect key="frame" x="18" y="13.5" width="31" height="60"/>
+                                                <rect key="frame" x="18" y="8.5" width="33.5" height="70"/>
                                                 <fontDescription key="fontDescription" name="DS-Digital-BoldItalic" family="DS-Digital" pointSize="60"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="℃1_bg" translatesAutoresizingMaskIntoConstraints="NO" id="Swg-9I-blN">
-                                                <rect key="frame" x="57" y="54.5" width="23" height="19"/>
+                                                <rect key="frame" x="59.5" y="59.5" width="23" height="19"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rh1_bg" translatesAutoresizingMaskIntoConstraints="NO" id="fLn-RG-UGx">
-                                                <rect key="frame" x="278" y="50.5" width="24" height="13"/>
+                                                <rect key="frame" x="278" y="55.5" width="24" height="13"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJZ-Vr-Kaz">
-                                                <rect key="frame" x="208.5" y="13.5" width="61.5" height="60"/>
+                                                <rect key="frame" x="203" y="8.5" width="67" height="70"/>
                                                 <fontDescription key="fontDescription" name="DS-Digital-BoldItalic" family="DS-Digital" pointSize="60"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -350,28 +350,28 @@
                                         <rect key="frame" x="0.0" y="175.5" width="320" height="85.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ms1-o5-4ZC">
-                                                <rect key="frame" x="18" y="13" width="31" height="60"/>
+                                                <rect key="frame" x="18" y="8" width="33.5" height="70"/>
                                                 <fontDescription key="fontDescription" name="DS-Digital-BoldItalic" family="DS-Digital" pointSize="60"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ㄈ1_bg" translatesAutoresizingMaskIntoConstraints="NO" id="Cwz-Wj-pg4">
-                                                <rect key="frame" x="57" y="55" width="22" height="18"/>
+                                                <rect key="frame" x="59.5" y="60" width="22" height="18"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="winecooler2_adjust_icon" translatesAutoresizingMaskIntoConstraints="NO" id="A0n-x9-Irp">
-                                                <rect key="frame" x="57" y="13" width="13" height="34"/>
+                                                <rect key="frame" x="59.5" y="18" width="13" height="34"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rh1_bg" translatesAutoresizingMaskIntoConstraints="NO" id="Vbg-Xa-fpQ">
-                                                <rect key="frame" x="278" y="50" width="24" height="13"/>
+                                                <rect key="frame" x="278" y="55" width="24" height="13"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQG-KR-RHv">
-                                                <rect key="frame" x="208.5" y="13" width="61.5" height="60"/>
+                                                <rect key="frame" x="203" y="8" width="67" height="70"/>
                                                 <fontDescription key="fontDescription" name="DS-Digital-BoldItalic" family="DS-Digital" pointSize="60"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="winecooler2_adjust_icon" translatesAutoresizingMaskIntoConstraints="NO" id="U7F-kN-qeu">
-                                                <rect key="frame" x="283.5" y="8" width="13" height="34"/>
+                                                <rect key="frame" x="283.5" y="13" width="13" height="34"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyu-TH-7WZ" userLabel="TempBtn">
                                                 <rect key="frame" x="0.0" y="0.0" width="160" height="85.5"/>

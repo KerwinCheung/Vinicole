@@ -14,7 +14,6 @@
 		182BE9571E325F540049E57B /* CorporateCultureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182BE9561E325F540049E57B /* CorporateCultureViewController.m */; };
 		182BE95A1E3261990049E57B /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182BE9591E3261990049E57B /* HelpViewController.m */; };
 		182BE95E1E3276210049E57B /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182BE95D1E3276210049E57B /* AboutUsViewController.m */; };
-		184882B61EFDB14100C5F40A /* DeviceSetTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184882B51EFDB14100C5F40A /* DeviceSetTimeViewController.m */; };
 		1848CB7C1F02A1DB005BC95A /* UAProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1848CB7B1F02A1DB005BC95A /* UAProgressView.m */; };
 		1856ABE41DF52818005EFF8A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1856ABE61DF52818005EFF8A /* Localizable.strings */; };
 		1856ABF51DF67CD0005EFF8A /* AddDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1856ABF41DF67CD0005EFF8A /* AddDeviceViewController.m */; };
@@ -74,8 +73,6 @@
 		182BE9591E3261990049E57B /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
 		182BE95C1E3276210049E57B /* AboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsViewController.h; sourceTree = "<group>"; };
 		182BE95D1E3276210049E57B /* AboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsViewController.m; sourceTree = "<group>"; };
-		184882B41EFDB14100C5F40A /* DeviceSetTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceSetTimeViewController.h; sourceTree = "<group>"; };
-		184882B51EFDB14100C5F40A /* DeviceSetTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceSetTimeViewController.m; sourceTree = "<group>"; };
 		1848CB7A1F02A1DB005BC95A /* UAProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UAProgressView.h; sourceTree = "<group>"; };
 		1848CB7B1F02A1DB005BC95A /* UAProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UAProgressView.m; sourceTree = "<group>"; };
 		1856ABE71DF52826005EFF8A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -217,8 +214,6 @@
 			children = (
 				1856ABFB1DF68927005EFF8A /* DeviceControlViewController.h */,
 				1856ABFC1DF68927005EFF8A /* DeviceControlViewController.m */,
-				184882B41EFDB14100C5F40A /* DeviceSetTimeViewController.h */,
-				184882B51EFDB14100C5F40A /* DeviceSetTimeViewController.m */,
 			);
 			name = DeviceControl;
 			sourceTree = "<group>";
@@ -559,7 +554,6 @@
 				1856ABF51DF67CD0005EFF8A /* AddDeviceViewController.m in Sources */,
 				182BE95E1E3276210049E57B /* AboutUsViewController.m in Sources */,
 				1856AC2E1DF6D0C6005EFF8A /* DataSource.m in Sources */,
-				184882B61EFDB14100C5F40A /* DeviceSetTimeViewController.m in Sources */,
 				18839E781DDAFCCD00B87B4D /* GCDAsyncUdpSocket.m in Sources */,
 				18839EBD1DDAFD7400B87B4D /* BaseNavigationController.m in Sources */,
 				18839E171DDAFA4C00B87B4D /* AppDelegate.m in Sources */,

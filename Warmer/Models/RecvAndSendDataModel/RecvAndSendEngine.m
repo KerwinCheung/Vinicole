@@ -213,8 +213,9 @@
 }
 
 -(void)getDataPoint:(NSMutableArray *)dataPoint RecvData:(NSMutableData *)recvData{
-    /*aaaa 0000 c8 00 
-     01010000 0c503214 0000
+    /*aaaa 0000 c8 00
+     开关    灯开关    玻璃门除雾开关状态    温度单位    温度设定值    湿度设定值    实际温度值    实际湿度    工作状态    故障
+    <01       01        01                  01      24          81          4e          14 0000
      */
     //1  开关 1byte 0=关，1=开
     [dataPoint replaceObjectAtIndex:0 withObject:[NSMutableData dataWithData:[recvData subdataWithRange:NSMakeRange(0, 1)]]];

@@ -7,7 +7,6 @@
 //
 
 #import "DeviceControlViewController.h"
-#import "DeviceSetTimeViewController.h"
 #import "AddDeviceViewController.h"
 
 #import <AudioToolbox/AudioToolbox.h>
@@ -114,10 +113,9 @@
         
         
     }else{
-        DeviceSetTimeViewController *vc = [self loadViewControllerWithStoryboardName:@"DeviceControl" withViewControllerName:@"DeviceSetTimeViewController"];
-        vc.doWhat = btnTag;
-        vc.deviceModel = self.deviceModel;
-        [self.navigationController pushViewController:vc animated:YES];
+        //        DeviceSetTimeViewController *vc = [self loadViewControllerWithStoryboardName:@"DeviceControl" withViewControllerName:@"DeviceSetTimeViewController"];
+        //        vc.deviceModel = self.deviceModel;
+        //        [self.navigationController pushViewController:vc animated:YES];
     }
 }
 
@@ -326,16 +324,18 @@
     //3  玻璃门除雾开关状态 1byte 0=关，1=开
     [self setDefoggingValue];
     
-    //4  温度单位 1byte 0=关，1=开
+    //4  温度单位 1byte
     UInt8 tempSwitch = ((const UInt8 *)_deviceModel.dataPoint[3].bytes)[0];
     switch (tempSwitch) {
         case 0:
         {
+            //0=摄氏度
             _TempSwtichBtn.selected = NO;
         }
             break;
         case 1:
         {
+            //1=华氏度
             _TempSwtichBtn.selected = YES;
         }
             break;
@@ -343,11 +343,13 @@
             break;
     }
     if (self.TempSwtichBtn.selected) {
-        [_currentTempImg setImage:[UIImage imageNamed:@"℃1_bg"]];
-        [_settingTempImg setImage:[UIImage imageNamed:@"℃1_bg"]];
-    }else{
+        //1=华氏度
         [_currentTempImg setImage:[UIImage imageNamed:@"ㄈ1_bg"]];
         [_settingTempImg setImage:[UIImage imageNamed:@"ㄈ1_bg"]];
+    }else{
+        //0=摄氏度
+        [_currentTempImg setImage:[UIImage imageNamed:@"℃1_bg"]];
+        [_settingTempImg setImage:[UIImage imageNamed:@"℃1_bg"]];
     }
     //5  温度设定值 1byte 5~20 步长为1
     UInt8 settingTempValue = ((const UInt8 *)_deviceModel.dataPoint[4].bytes)[0];
@@ -508,6 +510,7 @@
 #pragma mark - SettingBtnAction
 - (IBAction)settingBtnAction:(UIButton *)sender {
     _PickerView.hidden = NO;
+    _shadowView.hidden = NO;
     switch (sender.tag) {
         case 0:
         {
@@ -640,7 +643,7 @@
 - (IBAction)PickerViewOKBtnAction:(id)sender {
     if ([_unitLabel.text isEqualToString:@"%RH"]) {
         //发送设置湿度
-        UInt8 humidityValue = _minuteNum;
+        int humidityValue = _minuteNum;
         [self.deviceModel.dataPoint[5] replaceBytesInRange:NSMakeRange(0,1) withBytes:&humidityValue length:1];
         [SendPacketModel controlDevice:_deviceModel.device withSendData:_deviceModel.dataPoint[5] Command:0x06];
     }else{
@@ -649,11 +652,13 @@
         [self.deviceModel.dataPoint[4] replaceBytesInRange:NSMakeRange(0,1) withBytes:&tempValue length:1];
         [SendPacketModel controlDevice:_deviceModel.device withSendData:_deviceModel.dataPoint[4] Command:0x05];
     }
-     _PickerView.hidden = YES;
+    _PickerView.hidden = YES;
+    _shadowView.hidden = YES;
 }
 
 - (IBAction)PickerViewCancleBtnAction:(id)sender {
     _PickerView.hidden = YES;
+    _shadowView.hidden = YES;
 }
 
 -(void)viewDidDisappear:(BOOL)animated{
