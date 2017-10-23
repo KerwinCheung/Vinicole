@@ -253,7 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				180DAB611DF7082400926317 /* xlinksdklib.xcodeproj */,
-				18839E111DDAFA4C00B87B4D /* Warmer */,
+				18839E111DDAFA4C00B87B4D /* Vinicole */,
 				18839E101DDAFA4C00B87B4D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -266,7 +266,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		18839E111DDAFA4C00B87B4D /* Warmer */ = {
+		18839E111DDAFA4C00B87B4D /* Vinicole */ = {
 			isa = PBXGroup;
 			children = (
 				18FEF5A61DE8A6C2003451F6 /* AppDelegate */,
@@ -277,9 +277,6 @@
 				18839E1E1DDAFA4C00B87B4D /* Assets.xcassets */,
 				18839E201DDAFA4C00B87B4D /* LaunchScreen.storyboard */,
 				18839E231DDAFA4C00B87B4D /* Info.plist */,
-				18839E391DDAFC6B00B87B4D /* PrefixHeader.pch */,
-				18839E3A1DDAFCA700B87B4D /* Notification.h */,
-				1856ABE61DF52818005EFF8A /* Localizable.strings */,
 				18839EB61DDAFD4E00B87B4D /* StoryBoard */,
 				18839EB71DDAFD5300B87B4D /* ViewController */,
 				1856AC191DF6D0C6005EFF8A /* Models */,
@@ -289,12 +286,15 @@
 				18839EB81DDAFD6400B87B4D /* Resources */,
 				18839E121DDAFA4C00B87B4D /* Supporting Files */,
 			);
-			path = Warmer;
+			path = Vinicole;
 			sourceTree = "<group>";
 		};
 		18839E121DDAFA4C00B87B4D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				18839E391DDAFC6B00B87B4D /* PrefixHeader.pch */,
+				18839E3A1DDAFCA700B87B4D /* Notification.h */,
+				1856ABE61DF52818005EFF8A /* Localizable.strings */,
 				180F2D2A1F93BFFD008ABCEC /* DS-DIGIT.TTF */,
 				18839E131DDAFA4C00B87B4D /* main.m */,
 			);
@@ -709,12 +709,12 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Warmer/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = Vinicole/PrefixHeader.pch;
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/xlinksdklib_v3/xlinksdklib/SDKlib";
-				INFOPLIST_FILE = "$(SRCROOT)/Warmer/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Vinicole/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/Warmer/SDK/HFSmartLink";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/Vinicole/SDK/HFSmartLink";
 				OTHER_LDFLAGS = "-lxlinksdklib";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Vinicole.Dev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -732,12 +732,12 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Warmer/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = Vinicole/PrefixHeader.pch;
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/xlinksdklib_v3/xlinksdklib/SDKlib";
-				INFOPLIST_FILE = "$(SRCROOT)/Warmer/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Vinicole/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/Warmer/SDK/HFSmartLink";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/Vinicole/SDK/HFSmartLink";
 				OTHER_LDFLAGS = "-lxlinksdklib";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Vinicole.Dev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
