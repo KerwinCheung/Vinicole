@@ -60,6 +60,10 @@
     return viewController;
 }
 
+- (IBAction)LeftBarBtnActin:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 
 
 @end

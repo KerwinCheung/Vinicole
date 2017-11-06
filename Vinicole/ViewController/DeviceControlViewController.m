@@ -8,6 +8,7 @@
 
 #import "DeviceControlViewController.h"
 #import "AddDeviceViewController.h"
+#import "WareHouseViewController.h"
 
 #import <AudioToolbox/AudioToolbox.h>
 #import "SendPacketModel.h"
@@ -231,6 +232,8 @@
 
 - (IBAction)storageBtn:(id)sender {
     //存储页面
+    WareHouseViewController *vc = [self loadViewControllerWithStoryboardName:@"DeviceControl" withViewControllerName:@"WareHouseViewController"];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (IBAction)menuBtn:(UIButton *)sender {
