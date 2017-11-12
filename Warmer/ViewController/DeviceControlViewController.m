@@ -100,7 +100,6 @@
     [self setPickerDataArray];
     
     [self setUpConstant];
-    //    [self setUI];
     [self setUI];
     
 }
