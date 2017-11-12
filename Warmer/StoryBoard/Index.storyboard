@@ -212,7 +212,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4iE-nr-Y62">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="品牌文化" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkw-ew-kAr">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="企业文化" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkw-ew-kAr">
                                         <rect key="frame" x="168.66666666666666" y="30" width="78" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="w1g-XH-ufx"/>
@@ -245,19 +245,18 @@
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wenhua" translatesAutoresizingMaskIntoConstraints="NO" id="ljc-nb-vN5">
-                                <rect key="frame" x="0.0" y="64" width="414" height="214"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="169"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mkF-G8-ZMm">
-                                <rect key="frame" x="0.0" y="278" width="414" height="458"/>
+                                <rect key="frame" x="0.0" y="233" width="414" height="503"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lhv-0S-2k4">
-                                        <rect key="frame" x="0.0" y="0.0" width="413" height="332.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="413" height="434.33333333333337"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ldr-WW-x6Q">
-                                                <rect key="frame" x="8" y="8" width="397" height="324.66666666666663"/>
-                                                <string key="text">    中山市惠尔普斯电器有限公司是一家专业生产家用电器和商用电器的现代化高科技企业，公司专注于家用豆浆机、商用豆浆机，电热水壶，绞肉机，破壁料理机，水果冰淇淋机等产品的研发和生产，深受国内外消费者的喜爱。 惠尔普斯公司自成立以来，秉持技术领先、顾客至上，质量第一的发展目标，凭借卓越的科技及前卫的设计理念，依靠领先的研发能力和精湛的制造技术，不断研发和生产出健康、安全、时尚、智能为一体的家用、商用电器产品，自投放市场以来，深受广大顾客好评。
-    惠尔普斯电器2013年度被评为质量合格用户满意企业，2014年荣获商用豆浆机自主创新金奖，2015年度成为慧聪网年度优质供应商，并与同年入驻亚洲最大的家电城“慧聪家电城”发力O2O项目。我们坚信“好品质是企业长久发展之根本”!
-</string>
+                                                <rect key="frame" x="8" y="8" width="397" height="426.33333333333337"/>
+                                                <mutableString key="text">“Vinicole” means the French wine culture. We are professional dedicated to producing high-grade compressor wine cellar, our products exported to Europe, America, Southeast Asia, Australia, New Zealand etc. We focus on the world's classic wine storage and maintenance, always synchronized with the international advanced level and artistic trends, continuous innovation. Vinicole has been creating products to meet all of your needs. In the philosophy of “Customer Supremacy, Constant Innovation”, we have been favored by lots of customers. Valuable suggestions from customers has been our constant innovation and progressive power source, we are willing to provide attentive service dedicated the new and old customers.
+</mutableString>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -821,7 +820,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vje-kg-eXw">
-                                <rect key="frame" x="0.0" y="287" width="414" height="124"/>
+                                <rect key="frame" x="0.0" y="287" width="414" height="154"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r0k-MT-NNB" customClass="UIControl">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
@@ -832,8 +831,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="400-880-3348" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZD-Up-6Al">
-                                                <rect key="frame" x="274.66666666666674" y="10" width="119.33333333333331" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+86-760-8877" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZD-Up-6Al">
+                                                <rect key="frame" x="277.33333333333326" y="10" width="116.66666666666669" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -874,8 +873,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="http://www.sampux.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WcO-F1-eyV">
-                                                <rect key="frame" x="208.33333333333337" y="10" width="185.66666666666663" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="www.vinicolecellar.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WcO-F1-eyV">
+                                                <rect key="frame" x="217.66666666666663" y="10" width="176.33333333333337" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -894,16 +893,16 @@
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lWs-Yo-eAA">
-                                        <rect key="frame" x="0.0" y="84" width="414" height="40"/>
+                                        <rect key="frame" x="0.0" y="84" width="414" height="70"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地址" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7S-CG-UFu">
-                                                <rect key="frame" x="20" y="10" width="35" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="地址" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7S-CG-UFu">
+                                                <rect key="frame" x="20" y="24" width="35" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="广东省中山黄埔镇新丰北路86号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sae-4v-jmv">
-                                                <rect key="frame" x="176" y="12" width="218" height="18"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="No.3 Zhiye Road,Dacen Industry District,Huangpu Town,Zhongshan City,Guangdong Provices,China." textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sae-4v-jmv">
+                                                <rect key="frame" x="85" y="8" width="309" height="54"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -913,8 +912,10 @@
                                         <constraints>
                                             <constraint firstItem="Sae-4v-jmv" firstAttribute="centerY" secondItem="K7S-CG-UFu" secondAttribute="centerY" id="41g-X4-95m"/>
                                             <constraint firstAttribute="trailing" secondItem="Sae-4v-jmv" secondAttribute="trailing" constant="20" id="WPf-UV-LYu"/>
-                                            <constraint firstAttribute="height" constant="40" id="YiM-mK-t3Y"/>
+                                            <constraint firstItem="Sae-4v-jmv" firstAttribute="leading" secondItem="K7S-CG-UFu" secondAttribute="trailing" constant="30" id="YlK-Uv-Kfq"/>
                                             <constraint firstItem="K7S-CG-UFu" firstAttribute="leading" secondItem="lWs-Yo-eAA" secondAttribute="leading" constant="20" id="a91-G7-ymF"/>
+                                            <constraint firstItem="Sae-4v-jmv" firstAttribute="top" secondItem="lWs-Yo-eAA" secondAttribute="top" constant="8" id="eHW-nQ-2Tb"/>
+                                            <constraint firstAttribute="bottom" secondItem="Sae-4v-jmv" secondAttribute="bottom" constant="8" id="kvf-vg-cPZ"/>
                                             <constraint firstItem="K7S-CG-UFu" firstAttribute="centerY" secondItem="lWs-Yo-eAA" secondAttribute="centerY" id="xWP-3P-czj"/>
                                         </constraints>
                                     </view>
@@ -940,7 +941,7 @@
                                 </constraints>
                             </view>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2014-2016 LinkJob. All Rights Reserved" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPx-PU-N2g">
-                                <rect key="frame" x="20" y="431" width="374" height="12"/>
+                                <rect key="frame" x="20" y="461" width="374" height="12"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -970,7 +971,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cfW-Z5-TKB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1426" y="815"/>
+            <point key="canvasLocation" x="1424.6376811594205" y="814.4021739130435"/>
         </scene>
         <!--Base Navigation Controller-->
         <scene sceneID="OeD-gj-4b6">
@@ -992,12 +993,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Add_back" width="12" height="28"/>
+        <image name="Add_back" width="9" height="17"/>
         <image name="add_btn" width="22" height="22"/>
         <image name="cate_heater" width="67" height="67"/>
         <image name="loginImg" width="83" height="83"/>
         <image name="menu_+" width="22" height="22"/>
         <image name="menu_btn" width="24" height="20"/>
-        <image name="wenhua" width="375" height="214"/>
+        <image name="wenhua" width="375" height="169"/>
     </resources>
 </document>

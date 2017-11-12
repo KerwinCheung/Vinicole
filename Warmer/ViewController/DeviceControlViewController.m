@@ -101,11 +101,21 @@
     
     [self setUpConstant];
     //    [self setUI];
+    [self setUI];
     
 }
 
 -(void)setUpConstant{
-    
+//    5      320 568
+//    6      375 667
+//    6+    414 736
+    if (MainWidth == 320) {
+        
+    }else if (MainWidth == 375){
+        
+    }else if(MainWidth == 414){
+        
+    }
 }
 
 -(void)goSetTimeVC:(NSInteger)btnTag{
@@ -241,7 +251,7 @@
     if (self.menuView.hidden) {
         
         
-        if (self.isOpen) {
+        if (self.isOpen && self.PickerView.hidden == YES) {
             self.shadowView.hidden = self.menuView.hidden;
         }
         
@@ -358,8 +368,10 @@
     UInt8 settingHumidityValue = ((const UInt8 *)_deviceModel.dataPoint[5].bytes)[0];
     _settingHumidityLabel.text = [NSString stringWithFormat:@"%d",settingHumidityValue];
     //7  实际温度值 1byte 0~129 步长为1(实际温度为值-30)
-    UInt8 tempValue = ((const UInt8 *)_deviceModel.dataPoint[6].bytes)[0] - 30;
-    _currentTempLabel.text = [NSString stringWithFormat:@"%d",tempValue];
+    if (_deviceModel.device.isConnected) {
+        UInt8 tempValue = ((const UInt8 *)_deviceModel.dataPoint[6].bytes)[0] - 30;
+        _currentTempLabel.text = [NSString stringWithFormat:@"%d",tempValue];
+    }
     //8  实际湿度 1byte 0~99 步长为1
     UInt8 humidityValue = ((const UInt8 *)_deviceModel.dataPoint[7].bytes)[0];
     _currentHumidityLabel.text = [NSString stringWithFormat:@"%d",humidityValue];
@@ -640,6 +652,7 @@
     [self.minutePicker selectRow:minuteArr.count inComponent:0 animated:YES];
 }
 
+#pragma mark pickerViewBtnAction
 - (IBAction)PickerViewOKBtnAction:(id)sender {
     if ([_unitLabel.text isEqualToString:@"%RH"]) {
         //发送设置湿度
@@ -653,12 +666,17 @@
         [SendPacketModel controlDevice:_deviceModel.device withSendData:_deviceModel.dataPoint[4] Command:0x05];
     }
     _PickerView.hidden = YES;
-    _shadowView.hidden = YES;
+    if (_menuView.hidden == YES && _isOpen) {
+        _shadowView.hidden = YES;
+    }
+    
 }
 
 - (IBAction)PickerViewCancleBtnAction:(id)sender {
     _PickerView.hidden = YES;
-    _shadowView.hidden = YES;
+    if (_menuView.hidden == YES && _isOpen) {
+        _shadowView.hidden = YES;
+    }
 }
 
 -(void)viewDidDisappear:(BOOL)animated{

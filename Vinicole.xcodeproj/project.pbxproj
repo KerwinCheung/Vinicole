@@ -488,7 +488,7 @@
 				TargetAttributes = {
 					18839E0E1DDAFA4C00B87B4D = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = X96SV9GVU5;
+						DevelopmentTeam = 5D65744SX5;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -705,7 +705,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = X96SV9GVU5;
+				DEVELOPMENT_TEAM = 5D65744SX5;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -716,7 +716,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/Warmer/SDK/HFSmartLink";
 				OTHER_LDFLAGS = "-lxlinksdklib";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Vinicole.Dev;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Vinicole;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -728,7 +728,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = X96SV9GVU5;
+				DEVELOPMENT_TEAM = 5D65744SX5;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -739,7 +739,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/Warmer/SDK/HFSmartLink";
 				OTHER_LDFLAGS = "-lxlinksdklib";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Vinicole.Dev;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Vinicole;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
