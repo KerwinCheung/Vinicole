@@ -772,9 +772,7 @@ static SenderEngine * _shareEngine;
         [self udpSendDevice:device andData:data];
         
     }
-    
-    
-    
+
 }
 
 -(void)sendLocalSetDeviceAuthorize:(DeviceEntity *)device andMessageID:(int)msgID andOldAuthKey:(NSNumber *)oldAuth andNewAuthKey:(NSNumber *)newAuth andFlag:(int)flag{

@@ -50,6 +50,7 @@
 		18FEF5B61DE8AAEB003451F6 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FEF5B51DE8AAEB003451F6 /* RegisterViewController.m */; };
 		18FEF5C21DE8B377003451F6 /* HttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FEF5C11DE8B377003451F6 /* HttpRequest.m */; };
 		18FEF5C61DE8B3A5003451F6 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FEF5C51DE8B3A5003451F6 /* MBProgressHUD.m */; };
+		F508BAEB1F9DBA550001E5E9 /* WareHouseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F508BAEA1F9DBA550001E5E9 /* WareHouseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +147,8 @@
 		18FEF5C11DE8B377003451F6 /* HttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequest.m; sourceTree = "<group>"; };
 		18FEF5C41DE8B3A5003451F6 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		18FEF5C51DE8B3A5003451F6 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		F508BAE91F9DBA550001E5E9 /* WareHouseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WareHouseViewController.h; sourceTree = "<group>"; };
+		F508BAEA1F9DBA550001E5E9 /* WareHouseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WareHouseViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +217,8 @@
 			children = (
 				1856ABFB1DF68927005EFF8A /* DeviceControlViewController.h */,
 				1856ABFC1DF68927005EFF8A /* DeviceControlViewController.m */,
+				F508BAE91F9DBA550001E5E9 /* WareHouseViewController.h */,
+				F508BAEA1F9DBA550001E5E9 /* WareHouseViewController.m */,
 			);
 			name = DeviceControl;
 			sourceTree = "<group>";
@@ -253,7 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				180DAB611DF7082400926317 /* xlinksdklib.xcodeproj */,
-				18839E111DDAFA4C00B87B4D /* Warmer */,
+				18839E111DDAFA4C00B87B4D /* Vinicole */,
 				18839E101DDAFA4C00B87B4D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -266,7 +271,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		18839E111DDAFA4C00B87B4D /* Warmer */ = {
+		18839E111DDAFA4C00B87B4D /* Vinicole */ = {
 			isa = PBXGroup;
 			children = (
 				18FEF5A61DE8A6C2003451F6 /* AppDelegate */,
@@ -277,9 +282,6 @@
 				18839E1E1DDAFA4C00B87B4D /* Assets.xcassets */,
 				18839E201DDAFA4C00B87B4D /* LaunchScreen.storyboard */,
 				18839E231DDAFA4C00B87B4D /* Info.plist */,
-				18839E391DDAFC6B00B87B4D /* PrefixHeader.pch */,
-				18839E3A1DDAFCA700B87B4D /* Notification.h */,
-				1856ABE61DF52818005EFF8A /* Localizable.strings */,
 				18839EB61DDAFD4E00B87B4D /* StoryBoard */,
 				18839EB71DDAFD5300B87B4D /* ViewController */,
 				1856AC191DF6D0C6005EFF8A /* Models */,
@@ -289,12 +291,15 @@
 				18839EB81DDAFD6400B87B4D /* Resources */,
 				18839E121DDAFA4C00B87B4D /* Supporting Files */,
 			);
-			path = Warmer;
+			path = Vinicole;
 			sourceTree = "<group>";
 		};
 		18839E121DDAFA4C00B87B4D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				18839E391DDAFC6B00B87B4D /* PrefixHeader.pch */,
+				18839E3A1DDAFCA700B87B4D /* Notification.h */,
+				1856ABE61DF52818005EFF8A /* Localizable.strings */,
 				180F2D2A1F93BFFD008ABCEC /* DS-DIGIT.TTF */,
 				18839E131DDAFA4C00B87B4D /* main.m */,
 			);
@@ -553,6 +558,7 @@
 			files = (
 				1856ABF51DF67CD0005EFF8A /* AddDeviceViewController.m in Sources */,
 				182BE95E1E3276210049E57B /* AboutUsViewController.m in Sources */,
+				F508BAEB1F9DBA550001E5E9 /* WareHouseViewController.m in Sources */,
 				1856AC2E1DF6D0C6005EFF8A /* DataSource.m in Sources */,
 				18839E781DDAFCCD00B87B4D /* GCDAsyncUdpSocket.m in Sources */,
 				18839EBD1DDAFD7400B87B4D /* BaseNavigationController.m in Sources */,
@@ -709,12 +715,12 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Warmer/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = Vinicole/PrefixHeader.pch;
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/xlinksdklib_v3/xlinksdklib/SDKlib";
-				INFOPLIST_FILE = "$(SRCROOT)/Warmer/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Vinicole/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/Warmer/SDK/HFSmartLink";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/Vinicole/SDK/HFSmartLink";
 				OTHER_LDFLAGS = "-lxlinksdklib";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Vinicole;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -732,12 +738,12 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Warmer/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = Vinicole/PrefixHeader.pch;
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/xlinksdklib_v3/xlinksdklib/SDKlib";
-				INFOPLIST_FILE = "$(SRCROOT)/Warmer/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Vinicole/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/Warmer/SDK/HFSmartLink";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/Vinicole/SDK/HFSmartLink";
 				OTHER_LDFLAGS = "-lxlinksdklib";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Vinicole;
 				PRODUCT_NAME = "$(TARGET_NAME)";
