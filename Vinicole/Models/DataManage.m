@@ -53,7 +53,6 @@
         }
         [[XLinkExportObject sharedObject] clearDeviceList];
     }
-    
 }
 
 -(void)tryConnectTimerRun{
@@ -65,12 +64,9 @@
 -(void)tryConnect{
     for (NSUInteger i = 0; i < DATASOURCE.user.deviceList.count; i++) {
         DeviceModel *deviceModel = DATASOURCE.user.deviceList[i];
-        
         if (!deviceModel.device.isConnected) {
             [[XLinkExportObject sharedObject] connectDevice:deviceModel.device andAuthKey:deviceModel.device.accessKey];
         }
-    
-        
         if (!deviceModel.device.isConnected && !deviceModel.device.isLANOnline && deviceModel.isSelect) {
             [[XLinkExportObject sharedObject] connectDevice:deviceModel.device andAuthKey:deviceModel.device.accessKey];
         }
