@@ -7,16 +7,25 @@
 //
 
 #import "WareHouseViewController.h"
+#import "DeviceModel.h"
 
 @interface WareHouseViewController ()
-
+@property (weak, nonatomic) IBOutlet UILabel *deviceNameLabel;
 @end
 
 @implementation WareHouseViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.deviceNameLabel.text = self.deviceModel.name;
+}
+
+- (IBAction)validityBtnAction:(id)sender {
+    //有效期按钮 navagationRightBarBtn
+}
+
+- (IBAction)winLineBtn:(UIButton *)sender {
+    NSLog(@"%zd",sender.tag);
 }
 
 - (void)didReceiveMemoryWarning {

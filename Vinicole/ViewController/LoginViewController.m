@@ -576,100 +576,98 @@
     
     [HttpRequest getDeviceListWithUserID:DATASOURCE.user.userId withAccessToken:DATASOURCE.user.accessToken withVersion:@(0) didLoadData:^(id result, NSError *err) {
         if (!err) {
-           // 暂时不同步云端设备
-//            NSArray *deviceList = [result objectForKey:@"list"];
-//            
-//            NSLog(@"count == %zd",deviceList.count);
-//            NSLog(@"%@", deviceList);
-//            //订阅本地未订阅的设备
-//            NSArray *deviceModels = DATASOURCE.user.deviceList;
-//            
-//            for (NSInteger i = deviceModels.count - 1; i >= 0; i--) {
-//                DeviceModel *deviceModel = deviceModels[i];
-//  
-//                BOOL isAllHas = NO;
-//                NSString *mac = [deviceModel.device getMacAddressSimple];
-//                for (NSDictionary *dic in deviceList) {     //如果云端也没有这个设备的话，去订阅设备
-//                    if ([mac isEqualToString:[dic objectForKey:@"mac"]]) {
+            NSArray *deviceList = [result objectForKey:@"list"];
+            
+            NSLog(@"count == %zd",deviceList.count);
+            NSLog(@"%@", deviceList);
+            //订阅本地未订阅的设备
+            NSArray *deviceModels = DATASOURCE.user.deviceList;
+            
+            for (NSInteger i = deviceModels.count - 1; i >= 0; i--) {
+                DeviceModel *deviceModel = deviceModels[i];
+  
+                BOOL isAllHas = NO;
+                NSString *mac = [deviceModel.device getMacAddressSimple];
+                for (NSDictionary *dic in deviceList) {     //如果云端也没有这个设备的话，去订阅设备
+                    if ([mac isEqualToString:[dic objectForKey:@"mac"]]) {
+
+                        isAllHas = YES;
+                        
+                        deviceModel.role = [dic[@"role"] intValue];
+                        deviceModel.source = [dic[@"source"] intValue];
+                        
+//                        if ([dic.allKeys containsObject:@"role"]) {
+//                            if ([dic[@"role"] intValue] == 0) {
+//                                deviceModel.authority = @"RW";
 //
-//                        isAllHas = YES;
-//                        
-//                        deviceModel.role = [dic[@"role"] intValue];
-//                        deviceModel.source = [dic[@"source"] intValue];
-//                        
-////                        if ([dic.allKeys containsObject:@"role"]) {
-////                            if ([dic[@"role"] intValue] == 0) {
-////                                deviceModel.authority = @"RW";
-////                                
-////                            }
-////                        }
-//                        
-////                        if ([dic.allKeys containsObject:@"authority"]) {
-////                            deviceModel.authority = [dic objectForKey:@"authority"]; //R RW
-////                        }
-////                        
-////                        if ([dic.allKeys containsObject:@"sn"]) {
-////                            deviceModel.device_Sn = [dic objectForKey:@"sn"];
-////                        }
-//                        
-//                        break;
-//                    }
-//                }
-//                
-//                if (!isAllHas) {
-//                    if (deviceModel.isSubscription.boolValue) {
-//
-////                        [[NSNotificationCenter defaultCenter] postNotificationName:kDeleteDevice object:deviceModel];
-//                    }else{
-//                        [[XLinkExportObject sharedObject] subscribeDevice:deviceModel.device andAuthKey:deviceModel.device.accessKey andFlag:YES];
-//                    }
-//                    
-//                }else{
-//                    deviceModel.isSubscription = @(1);      //云端有此设备，标识为已订阅
-//                }
-//            }
-//            
-//            //            往本地添加云端存在本地没有的设备
-//            for (NSDictionary *deviceDic in deviceList) {   //遍历云端设备
-//                NSString *mac = [deviceDic objectForKey:@"mac"];
-//                DeviceModel *deviceModel = [DATASOURCE getDeviceModelWithMac:mac];
-//                if (!deviceModel) {
-//                    DeviceModel *willDelDeviceModel = [DATASOURCE getWillDelDeviceModelWithMac:mac];
-//                    if (!willDelDeviceModel) {
-//                        DeviceEntity *device = [[DeviceEntity alloc] initWithMac:mac andProductID:[deviceDic objectForKey:@"product_id"]];
-//                        device.accessKey = [deviceDic objectForKey:@"access_key"];
-//                        device.version = [[deviceDic objectForKey:@"firmware_version"] intValue];
-//                        device.deviceID = [[deviceDic objectForKey:@"id"] intValue];
-//                        
-//                        
-////                        if ([deviceDic[@"product_id"] isEqualToString:CarCleanerPid]) {
-////                            deviceModel = [[ProtableAirCleanerDeviceModel alloc] init];
-////                        }else {
-////                            deviceModel = [[AirCleanerDeviceModel alloc] init];
-////                        }
-//                        
-//                        deviceModel = [[DeviceModel alloc] init];
-//                        
-//                        deviceModel.device = device;
-//                        deviceModel.isSubscription = @(1);
-//                        
-//                        if ([deviceDic.allKeys containsObject:@"role"]) {
-//                            deviceModel.role = [deviceDic[@"role"] intValue];
-////                            if ([deviceDic[@"role"] intValue] == 0) {
-////                                deviceModel.authority = @"RW";
-////                            }
+//                            }
 //                        }
-//                        
-//                        deviceModel.source = [deviceDic[@"source"] intValue];
-//                        
-//                        [[NSNotificationCenter defaultCenter] postNotificationName:kAddDevice object:deviceModel];
-//                    }
-//                }else{
-//                    deviceModel.device.version = 3;//[[deviceDic objectForKey:@"firmware_version"] intValue];
-//                }
-//            }
-//            
-//            [DATASOURCE saveDeviceModelWithMac:nil withIsUpload:NO];
+                        
+//                        if ([dic.allKeys containsObject:@"authority"]) {
+//                            deviceModel.authority = [dic objectForKey:@"authority"]; //R RW
+//                        }
+//
+//                        if ([dic.allKeys containsObject:@"sn"]) {
+//                            deviceModel.device_Sn = [dic objectForKey:@"sn"];
+//                        }
+                        
+                        break;
+                    }
+                }
+                
+                if (!isAllHas) {
+                    if (deviceModel.isSubscription.boolValue) {
+
+//                        [[NSNotificationCenter defaultCenter] postNotificationName:kDeleteDevice object:deviceModel];
+                    }else{
+                        [[XLinkExportObject sharedObject] subscribeDevice:deviceModel.device andAuthKey:deviceModel.device.accessKey andFlag:YES];
+                    }
+                    
+                }else{
+                    deviceModel.isSubscription = @(1);      //云端有此设备，标识为已订阅
+                }
+            }
+            
+            //            往本地添加云端存在本地没有的设备
+            for (NSDictionary *deviceDic in deviceList) {   //遍历云端设备
+                NSString *mac = [deviceDic objectForKey:@"mac"];
+                DeviceModel *deviceModel = [DATASOURCE getDeviceModelWithMac:mac];
+                if (!deviceModel) {
+                    DeviceModel *willDelDeviceModel = [DATASOURCE getWillDelDeviceModelWithMac:mac];
+                    if (!willDelDeviceModel) {
+                        DeviceEntity *device = [[DeviceEntity alloc] initWithMac:mac andProductID:[deviceDic objectForKey:@"product_id"]];
+                        device.accessKey = [deviceDic objectForKey:@"access_key"];
+                        device.version = [[deviceDic objectForKey:@"firmware_version"] intValue];
+                        device.deviceID = [[deviceDic objectForKey:@"id"] intValue];
+                        
+                        
+//                        if ([deviceDic[@"product_id"] isEqualToString:CarCleanerPid]) {
+//                            deviceModel = [[ProtableAirCleanerDeviceModel alloc] init];
+//                        }else {
+//                            deviceModel = [[AirCleanerDeviceModel alloc] init];
+//                        }
+                        
+                        deviceModel = [[DeviceModel alloc] init];
+                        deviceModel.device = device;
+                        deviceModel.isSubscription = @(1);
+                        
+                        if ([deviceDic.allKeys containsObject:@"role"]) {
+                            deviceModel.role = [deviceDic[@"role"] intValue];
+//                            if ([deviceDic[@"role"] intValue] == 0) {
+//                                deviceModel.authority = @"RW";
+//                            }
+                        }
+                        
+                        deviceModel.source = [deviceDic[@"source"] intValue];
+                        
+                        [[NSNotificationCenter defaultCenter] postNotificationName:kAddDevice object:deviceModel];
+                    }
+                }else{
+                    deviceModel.device.version = 3;//[[deviceDic objectForKey:@"firmware_version"] intValue];
+                }
+            }
+            
+            [DATASOURCE saveDeviceModelWithMac:nil withIsUpload:NO];
             
             
             if (!isBackground) {
@@ -708,8 +706,7 @@
 -(void)getDeviceInfoIsBackground:(BOOL)isBackground{
     NSArray *deviceModels = DATASOURCE.user.deviceList;
     for (DeviceModel *deviceModel in deviceModels) {
-        if (deviceModel.device) {
-            
+        if (deviceModel.device && !deviceModel.isExpDevice.boolValue) {
             [HttpRequest getDevicePropertyWithDeviceID:@(deviceModel.device.deviceID) withProductID:deviceModel.device.productID withAccessToken:DATASOURCE.user.accessToken didLoadData:^(id result, NSError *err) {
                 if (!err) {
                     NSLog(@"%@", result);

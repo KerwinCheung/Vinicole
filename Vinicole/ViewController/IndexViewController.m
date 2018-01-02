@@ -43,7 +43,7 @@
     [self setMenuTableView];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateDeviceList:) name:kUpdateDeviceList object:nil];
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateDeviceList:) name:kDeviceChange object:nil];
     [self AddExpDevice];
 }
 
@@ -69,7 +69,7 @@
 
 -(void)updateDeviceList:(NSNotification *)noti{
     
-    [_deviceTable performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
+    [self.deviceTable performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
     
 }
 

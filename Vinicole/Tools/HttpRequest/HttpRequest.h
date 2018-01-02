@@ -12,9 +12,9 @@
 #define CorpId @"1007d2ada2c3e200"
 
 //正式
-//#define Domain @"https://api2.xlink.cn"
+#define Domain @"https://api2.xlink.cn"
 //灰度
-#define Domain @"https://api-grey.xlink.cn"
+//#define Domain @"https://api-grey.xlink.cn"
 
 // 插件服务器
 #define plugInNnit @"http://plugin-api.xlink.cn"

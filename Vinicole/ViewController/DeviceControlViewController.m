@@ -242,6 +242,7 @@
 - (IBAction)storageBtn:(id)sender {
     //存储页面
     WareHouseViewController *vc = [self loadViewControllerWithStoryboardName:@"DeviceControl" withViewControllerName:@"WareHouseViewController"];
+    vc.deviceModel = self.deviceModel;
     [self.navigationController pushViewController:vc animated:YES];
 }
 

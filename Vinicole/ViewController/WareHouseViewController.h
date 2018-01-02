@@ -7,7 +7,7 @@
 //
 
 #import "BaseViewController.h"
-
+@class DeviceModel;
 @interface WareHouseViewController : BaseViewController
-
+@property (nonatomic,strong) DeviceModel *deviceModel;
 @end
